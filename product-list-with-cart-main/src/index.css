@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import "tailwindcss";
+
+/* Tailwind v4 theme override */
+@theme {
+  --font-redhat: 'Red Hat Text', sans-serif;
+  --color-newRed: hsl(14, 86%, 42%); 
+  --color-newGreen: hsl(159, 69%, 38%);
+}
+
+body {
+  font-family: var(--font-redhat);
+}
+
+/* Hide arrows in number input for Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,191 @@
+@import "config";
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+html {
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    font-size: 0.938rem;
+}
+
+body {
+    min-height: 100svh;
+    background-color: $very-dark-blue;
+    display: flex;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    .rating-card {
+        background-image: linear-gradient(to bottom, $dark-blue, darken($dark-blue, 7));
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 315px;
+
+        .icon-star {
+            background-color: lighten($dark-blue, 5);
+            padding: 12px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 13px;
+        }
+
+        p {
+            color: $light-grey;
+            margin-bottom: 30px;
+            line-height: 2;
+        }
+
+        fieldset {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border: none;
+            position: relative;
+            appearance: none;
+
+            label {
+
+                input {
+                    display: none;
+                }
+
+                .radio-check {
+                    display: inline-block;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    background-color: lighten($dark-blue, 5);
+                    color: $light-grey;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover, &:focus {
+                        background-color: $orange;
+                        color: $dark-blue;
+                    }
+                }
+
+                input:checked + .radio-check {
+                    background-color: white;
+                    color: $dark-blue;
+                }
+            }
+
+            .rating-input {
+                appearance: none;
+            }
+        }
+
+        button[type="submit"] {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: $orange;
+            color: $very-dark-blue;
+            font-size: 15px;
+            font-family: "Overpass", sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 30px;
+
+            &:hover, &:focus {
+                background-color: white;
+            }
+        }
+    }
+
+    #thank-you-state {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        img {
+            margin: 10px 0 20px 0;
+        }
+
+        .rating-p {
+            background-color: lighten($dark-blue, 7);
+            border-radius: 20px;
+            padding: 11px 15px 5px 15px;
+            color: $orange;
+            margin-bottom: 30px;
+        }
+
+        .thank-p {
+            margin-bottom: 0!important;
+        }
+    }
+
+    #error-message {
+        color: red; /* Ensure this is visible against the background */
+        font-size: 14px; /* Adjust as needed */
+        margin-bottom: -17px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .rating-card {
+        max-width: 340px!important;
+        padding: 40px 20px 30px 20px!important;
+        border-radius: 20px!important;
+    }
+}

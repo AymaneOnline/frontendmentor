@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="This a solution for the frontendmentor challenge 'Nft preview card component' by AymaneOnline">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+</head>
+<body>
+  <main>
+    <article class="card">
+      <a href="images/image-equilibrium.jpg" target="_blank" rel="noopener noreferrer" class="card__graphic" aria-label="View Equilibrium NFT">
+        <span class="card__overlay" aria-hidden="true">
+          <img class="card__overlay-icon" src="images/icon-view.svg" alt="">
+        </span>
+        <img class="card__img" src="images/image-equilibrium.jpg" alt="Equilibrium NFT artwork">
+      </a>
+
+      <h1 class="card__title">Equilibrium #3429</h1>
+      <p class="card__desc">Our Equilibrium collection promotes balance and calm.</p>
+
+      <div class="card__meta">
+        <span class="card__price"><img src="images/icon-ethereum.svg" alt="Ethereum logo" aria-hidden="true">0.041 ETH</span>
+        <span class="card__expiration"><img src="images/icon-clock.svg" alt="Clock icon" aria-hidden="true">3 days left</span>
+      </div>
+
+      <div class="card__creator">
+        <img class="card__creator-avatar" src="images/image-avatar.png" alt="Avatar of Jules Wyvern">
+        <p class="card__creator-text">Creation of <span class="card__creator-name">Jules Wyvern</span></p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

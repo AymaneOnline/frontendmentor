@@ -1,0 +1,32 @@
+@use "sass:color";
+@use "../styles/config" as *;
+
+.result__rate {
+    width: 150px;
+    height: 150px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient($gradient-violet-blue, $gradient-persian-blue);
+    border-radius: 50%;
+    color: $color-light-lavender;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.result__score {
+    display: block;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 768px) {
+    .result__rate {
+        width: 200px;
+        height: 200px;
+    }
+}

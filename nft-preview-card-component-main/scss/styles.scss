@@ -1,0 +1,150 @@
+@import "config";
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    min-height: 100svh;
+    background-color: $very-dark-blue-bg;
+    color: $white;
+    display: flex;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    padding: 25px;
+    background-color: $very-dark-blue-card;
+    border-radius: 15px;
+    box-shadow: 0px 25px 5px 10px rgba(0, 0, 0, 0.1),
+    0px 50px 15px 20px rgba(0, 0, 0, 0.1);
+
+    &__graphic {
+        width: 100%;
+        height: auto;
+        margin-block-end: 25px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        border-radius: 10px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: hsla(178, 100%, 50%, 50%);
+
+            img {
+                display: block;
+            }
+        }
+
+        &-icon {
+            display: none;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+
+        &:hover {
+            .card__overlay {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-block-end: 15px;
+        cursor: pointer;
+
+        &:hover {
+            color: $cyan;
+        }
+    }
+
+    &__desc {
+        font-weight: 200;
+        color: $soft-blue;
+        line-height: 1.5;
+        margin-block-end: 15px;
+    }
+
+    &__meta {
+        display: flex;
+        justify-content: space-between;
+        margin-block-end: 25px;
+    }
+
+    &__price {
+        font-weight: 600;
+        color: $cyan;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__expiration {
+        color: $soft-blue;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__creator {
+        display: flex;
+        align-items: center;
+        padding-block-start: 15px;
+        border-block-start: 1px solid $very-dark-blue-line;
+
+        &-avatar {
+            width: 36px;
+            height: auto;
+            display: block;
+            border: 1px solid $white;
+            border-radius: 50%;
+            margin-inline-end: 15px;
+            cursor: pointer;
+        }
+
+        &-text {
+            color: $soft-blue;
+        }
+
+        &-name {
+            color: $white;
+            cursor: pointer;
+
+            &:hover {
+                color: $cyan;
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+html {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 0.938rem;
+}
+
+body {
+  min-height: 100svh;
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+main .rating-card {
+  background-image: linear-gradient(to bottom, hsl(213, 19%, 18%), #171c21);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 315px;
+}
+main .rating-card .icon-star {
+  background-color: #303a46;
+  padding: 12px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+main .rating-card h1 {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+main .rating-card p {
+  color: hsl(217, 12%, 63%);
+  margin-bottom: 30px;
+  line-height: 2;
+}
+main .rating-card fieldset {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border: none;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main .rating-card fieldset label input {
+  display: none;
+}
+main .rating-card fieldset label .radio-check {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #303a46;
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main .rating-card fieldset label .radio-check:hover, main .rating-card fieldset label .radio-check:focus {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(213, 19%, 18%);
+}
+main .rating-card fieldset label input:checked + .radio-check {
+  background-color: white;
+  color: hsl(213, 19%, 18%);
+}
+main .rating-card fieldset .rating-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main .rating-card button[type=submit] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(216, 12%, 8%);
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+}
+main .rating-card button[type=submit]:hover, main .rating-card button[type=submit]:focus {
+  background-color: white;
+}
+main #thank-you-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main #thank-you-state img {
+  margin: 10px 0 20px 0;
+}
+main #thank-you-state .rating-p {
+  background-color: #343f4c;
+  border-radius: 20px;
+  padding: 11px 15px 5px 15px;
+  color: hsl(25, 97%, 53%);
+  margin-bottom: 30px;
+}
+main #thank-you-state .thank-p {
+  margin-bottom: 0 !important;
+}
+main #error-message {
+  color: red; /* Ensure this is visible against the background */
+  font-size: 14px; /* Adjust as needed */
+  margin-bottom: -17px;
+}
+
+@media screen and (min-width: 576px) {
+  .rating-card {
+    max-width: 340px !important;
+    padding: 40px 20px 30px 20px !important;
+    border-radius: 20px !important;
+  }
+}/*# sourceMappingURL=style.css.map */

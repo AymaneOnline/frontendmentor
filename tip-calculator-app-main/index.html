@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description"
+        content="This is a solution for the 'tip-calculator-app-main' challenge from Frontend Mentor"
+        author="AymaneOnline">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <main>
+    <div class="logo">
+      <img src="images/logo.svg" alt="Splitter's Logo" class="logo-img" width="87" height="54">
+    </div>
+    <div class="tip-calculator">
+
+      <form action="" id="calculate">
+        <div class="input">
+          <label for="bill">Bill</label>
+          <input type="number" name="bill" id="bill" class="numberInput">
+          <span class="error-message bill-error hidden">Can't be zero</span>
+          <img src="images/icon-dollar.svg" alt="Dollar icon" class="icon-dollar" width="11" height="17">
+        </div>
+  
+        <div class="tip-input">
+          <p class="label">Select Tip %</p>
+          <div class="tip-buttons">
+            <button class="tip-button" name="5">5%</button>
+            <button class="tip-button" name="10">10%</button>
+            <button class="tip-button" name="15">15%</button>
+            <button class="tip-button" name="25">25%</button>
+            <button class="tip-button" name="50">50%</button>
+            <input type="number" id="custom" placeholder="Custom"></input>
+          </div>
+        </div>
+  
+        <div class="input">
+          <label for="people-number">Number of People</label>
+          <input type="number" class="numberInput" id="people-number" name="people-number">
+          <span class="error-message person-error hidden">Can't be zero</span>
+          <img src="images/icon-person.svg" alt="Person icon" class="icon-person" width="13" height="16">
+        </div>
+      </form>
+
+      <div class="result">
+        <div class="tip-amount">
+          <p>Tip Amount <br> <span>/ person</span></p>
+          <p id="tip-amount-value" class="value"></p>
+        </div>
+        <div class="total">
+          <p>Total <br> <span>/ person</span></p>
+          <p id="total" class="value"></p>
+        </div>
+
+        <form action="" id="reset">
+          <button type="submit">Reset</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    const numberInputs = document.querySelectorAll('input');
+  
+    numberInputs.forEach((numberInput) => {
+      numberInput.addEventListener('keydown', function(e) {
+        // Prevent typing 'e', 'E', '+', '-' in the input field
+        if (e.key === 'e' || e.key === 'E' || e.key === '+' || e.key === '-') {
+          e.preventDefault();
+        }
+      });
+    })
+  </script>
+</body>
+</html>

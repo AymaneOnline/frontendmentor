@@ -1,0 +1,139 @@
+@import "config";
+
+// RESET AND DEFAULT
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+// Styles
+
+html {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    background: url(../assets/images/background-pattern-mobile.svg) no-repeat;
+    background-color: $light-pink;
+    min-height: 100svh;
+    display: flex;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.faq {
+    background-color: $white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    .title {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-inline-end: 20px;
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+
+    .faq-item {
+        border-block-end: 2px solid $light-pink;
+        padding: 20px 0;
+
+        &:last-child {
+            border: none;
+            padding-block-end: 0px;
+        }
+
+        .answer {
+            max-height: 0px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+
+            p {
+                color: $grayish-purple;
+                font-size: .98rem;
+            }
+        }
+
+        input:checked + label + .answer {
+            max-height: 200px;
+            margin-top: 15px;
+        }
+
+        label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            
+
+            &:hover {
+                cursor: pointer;
+                color: $light-purple;
+            }
+    
+            img {
+                margin-inline-start: 20px;
+            }
+    
+            .minus {
+                display: none;
+            }
+        }
+        
+        input:checked + label .plus {
+            display: none;
+        }
+
+        input:checked + label .minus {
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        background-image: url("../assets/images/background-pattern-desktop.svg");
+        background-size: contain;
+    }
+
+    .faq {
+        max-width: 575px;
+        padding: 30px;
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}

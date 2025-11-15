@@ -1,0 +1,29 @@
+// src/index.scss
+
+@use './styles/config' as *;
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: $font-weight-range;
+  font-display: swap;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: 18px;      // from style guide
+  line-height: 1.5;
+  color: $color-dark-gray-blue;
+  background-color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  background-color: $color-pale-blue;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

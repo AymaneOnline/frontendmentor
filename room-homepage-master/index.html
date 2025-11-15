@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Room homepage - Frontend Mentor challenge" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
+  <title>Frontend Mentor | Room homepage</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav__logo">
+        <img src="./images/logo.svg" alt="Room Logo" class="nav__logo-image" />
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
+        <img class="nav__icon nav__icon--open" src="images/icon-hamburger.svg" alt="" id="navToggleOpen">
+        <img class="nav__icon nav__icon--close hidden" src="images/icon-close.svg" alt="" id="navToggleClose">
+        <span class="visually-hidden">Toggle navigation</span>
+      </button>
+      <ul class="nav__list hidden" id="navList">
+        <li class="nav__item"><a href="#" class="nav__link">home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">shop</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="main__overlay" id="overlay"></div>
+
+    <div class="hero" id="hero">
+      <div class="hero__mobile">
+        <div class="hero__track">
+          <img src="./images/mobile-image-hero-1.jpg" alt="Hero Image" class="hero__image" />
+          <img src="./images/mobile-image-hero-2.jpg" alt="Hero Image" class="hero__image" />
+          <img src="./images/mobile-image-hero-3.jpg" alt="Hero Image" class="hero__image" />
+        </div>
+      </div>
+
+      <div class="hero__desktop">
+        <div class="hero__track">
+          <img src="./images/desktop-image-hero-1.jpg" alt="Hero Image" class="hero__image" />
+          <img src="./images/desktop-image-hero-2.jpg" alt="Hero Image" class="hero__image" />
+          <img src="./images/desktop-image-hero-3.jpg" alt="Hero Image" class="hero__image" />
+        </div>
+      </div>
+    </div>
+
+    <section class="features" id="features">
+      <div class="features__controls">
+        <button class="features__button features__button--prev" id="featuresPrev" aria-label="Previous feature">
+          <img src="images/icon-angle-left.svg" alt="Previous" aria-hidden="true"/>
+        </button>
+        <button class="features__button features__button--next" id="featuresNext" aria-label="Next feature">
+          <img src="images/icon-angle-right.svg" alt="Next" aria-hidden="true"/>
+        </button>
+      </div>
+
+      <div class="features__track">
+        <div class="features__item">
+          <h1 class="features__title">Discover innovative ways to decorate</h1>
+          <p class="features__text">We provide unmatched quality, comfort, and style for property owners across the country. 
+            Our experts combine form and function in bringing your vision to life. Create a room in your own style with our
+            collection and make your property a reflection of you and what you love.</p>
+          <a href="#" class="features__link">Shop now 
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/></svg>          </a>
+        </div>
+
+        <div class="features__item">
+          <h2 class="features__title">We are available all across the globe</h2>
+          <p class="features__text">With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+            Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+            store locator. Any questions? Don't hesitate to contact us today.</p>
+          <a href="#" class="features__link">Shop now 
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/></svg>          </a>
+          </a>
+        </div>
+
+        <div class="features__item">
+          <h2 class="features__title">Manufactured with the best materials</h2>
+          <p class="features__text">Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+            to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+            experience in this industry, we understand what customers want for their home and office.</p>
+          <a href="#" class="features__link">Shop now 
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/></svg>          </a>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="about-images about-images--dark">
+      <img src="images/image-about-dark.jpg" alt="About Dark" class="about-images__image" />
+    </div>
+
+    <section class="about-text">
+      <h2 class="about-text__title">About our furniture</h2>
+      <p class="about-text__paragraph">Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.</p>
+    </section>
+
+    <div class="about-images about-images--light">
+      <img src="images/image-about-light.jpg" alt="About Light" class="about-images__image" />
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

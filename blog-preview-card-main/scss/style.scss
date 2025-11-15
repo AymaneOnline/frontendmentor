@@ -1,0 +1,124 @@
+// Colors
+$primary-color: hsl(47, 88%, 63%);
+$black: hsl(0, 0%, 7%);
+
+// Font
+$font-path: '../assets/fonts/';
+$font-name: 'Figtree';
+
+@font-face {
+  font-family: $font-name;
+  src: url(#{$font-path}Figtree-VariableFont_wght.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url(#{$font-path}Figtree-VariableFont_wght.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+// Styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $primary-color;
+    font-family: $font-name;
+    min-height: 100svh;
+    display: flex;
+
+    .container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 24px;
+    }
+}
+
+.blog-card {
+    max-width: 384px;
+    max-height: 522px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 24px;
+    border: 1px $black solid;
+    box-shadow: 7px 7px 0px 0px hsl(0, 0%, 7%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    > * {
+        margin-bottom: 24px;
+    }
+    > *:last-child {
+        margin-bottom: unset;
+    }
+    &:hover {
+        box-shadow: 10px 10px 0px 0px hsl(0, 0%, 7%);
+        transform: translate(-3px, -3px);
+    }
+
+    #blog-image {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .blog-text {
+        letter-spacing: 0px;
+        line-height: 1.5;
+        > * {
+            margin-bottom: 12px;
+        }
+        > *:last-child {
+            margin-bottom: unset;
+        }
+
+        .category a {
+            text-decoration: unset;
+            color: $black;
+            font-size: 0.875em;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 4px;
+            background-color: $primary-color;
+        }
+
+        .publish_date {
+            font-size: 0.875em;
+            letter-spacing: 0px;
+            color: $black;
+        }
+
+        .title {
+            font-size: 1.5em;
+            color: $black;
+            &:hover {
+                cursor: pointer;
+                color: $primary-color;
+            }
+        }
+
+        .description {
+            font-size: 1em;
+            color: #595959;
+        }
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+
+        .authorname {
+            font-size: 14px;
+            font-weight: 800;
+            margin-left: 12px;
+        }
+    }
+}

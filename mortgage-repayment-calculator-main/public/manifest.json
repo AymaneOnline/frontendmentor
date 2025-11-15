@@ -1,0 +1,20 @@
+{
+  "name": "Mortgage Repayment Calculator",
+  "short_name": "Mortgage Calc",
+  "description": "Calculate your monthly mortgage repayments with our easy-to-use calculator",
+  "start_url": "/frontendmentor/mortgage-repayment-calculator-main-deploy/",
+  "display": "standalone",
+  "background_color": "#E4F4FD",
+  "theme_color": "#D8DB2F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "utilities"],
+  "lang": "en-US"
+}

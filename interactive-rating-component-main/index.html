@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description"
+        content="This is a solution of 'interactive-rating-component-main' from FrontEndMentor by AymaneOnline">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Interactive rating component</title> 
+</head>
+<body>
+  <main>
+    <!-- Rating state start -->
+    <div id="rating-state" class="rating-card ">
+      <img src="images/icon-star.svg" alt="" role="presentation" width="13" height="12" class="icon-star">
+
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+
+      <form>
+        <fieldset>
+          <legend class="visually-hidden">Select a rating:</legend> 
+          <label for="rating-1">
+            <input class="rating-input" id="rating-1" name="rating" type="radio" value="1" required aria-label="Rating 1 out of 5">
+            <span class="radio-check" tabindex="0">1</span>
+          </label>
+          <label for="rating-2">
+            <input class="rating-input" id="rating-2" name="rating" type="radio" value="2" aria-label="Rating 2 out of 5">
+            <span class="radio-check" tabindex="0">2</span> 
+          </label>
+          <label for="rating-3">
+            <input class="rating-input" id="rating-3" name="rating" type="radio" value="3" aria-label="Rating 3 out of 5">
+            <span class="radio-check" tabindex="0">3</span> 
+          </label>
+          <label for="rating-4">
+            <input class="rating-input" id="rating-4" name="rating" type="radio" value="4" aria-label="Rating 4 out of 5">
+            <span class="radio-check" tabindex="0">4</span> 
+          </label>
+          <label for="rating-5">
+            <input class="rating-input" id="rating-5" name="rating" type="radio" value="5" aria-label="Rating 5 out of 5">
+            <span class="radio-check" tabindex="0">5</span> 
+          </label>
+        </fieldset>
+  
+        <button type="submit">Submit</button>
+      </form>
+      <div id="error-message" class="hidden" role="alert" aria-live="assertive" aria-atomic="true">
+        Please select a rating before submitting.
+      </div>  
+    </div>
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div id="thank-you-state" class="rating-card hidden" aria-live="polite">
+      <img src="images/illustration-thank-you.svg" alt="" role="presentation">
+
+      <p class="rating-p">You selected <span id="rate"></span> out of 5</p>
+
+      <h1>Thank you!</h1>
+
+      <p class="thank-p">
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!
+      </p>
+
+    </div>
+    <!-- Thank you state end -->
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

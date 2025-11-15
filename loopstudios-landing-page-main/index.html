@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="This is a solution for the 'Loopstudios landing page' challenge from Fontend Mentor by AymaneOnline">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+<body>
+  <header class="header">
+    <img class="header__image mobile-img" src="images/mobile/image-hero.jpg" alt="Hero image" width="750" height="1300">
+    <img class="header__image desktop-img" src="images/desktop/image-hero.jpg" alt="Hero image" width="1440" height="650">
+    <nav class="nav" aria-label="Primary navigation" role="navigation">
+      <div class="logo">
+        <h1 class="logo__heading">
+          <a href="#" class="logo__link">
+            <img class="logo__image" src="images/logo.svg" alt="Loopstudios logo" width="192" height="32">
+          </a>
+        </h1>
+      </div>
+
+      <button id="nav-btn" class="nav__btn nav__btn--toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <img class="nav__btn-icon nav__btn-icon--active" src="images/icon-hamburger.svg" alt="Open menu">
+        <img class="nav__btn-icon" src="images/icon-close.svg" alt="Close menu">
+      </button>
+
+      <ul class="nav__list" id="nav-menu">
+        <li class="nav__item"><a class="nav__item-link" href="#">About</a></li>
+        <li class="nav__item"><a class="nav__item-link" href="#">Careers</a></li>
+        <li class="nav__item"><a class="nav__item-link" href="#">Events</a></li>
+        <li class="nav__item"><a class="nav__item-link" href="#">Products</a></li>
+        <li class="nav__item"><a class="nav__item-link" href="#">Support</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <h1 class="hero__h1">Immersive experiences that deliver</h1>
+    </section>
+  </header>
+
+  <main class="main">
+    <section class="interactive" aria-labelledby="interactive-title">
+      <img class="interactive__img mobile-img" src="images/mobile/image-interactive.jpg" alt="A man wearing a VR headset" role="presentation" aria-hidden="true" width="654" height="448">
+      <img class="interactive__img desktop-img" src="images/desktop/image-interactive.jpg" alt="A man wearing a VR headset" role="presentation" aria-hidden="true" width="731" height="500">
+      <div class="interactive__text">
+        <h1 id="interactive__title" class="interactive__title">The leader in interactive VR</h1>
+        <p class="interactive__paragraph">
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+        projects for some of the best companies around the globe. Our award-winning 
+        creations have transformed businesses through digital experiences that bind 
+        to their brand.
+        </p>
+      </div>
+    </section>
+
+    <section class="creations" aria-labelledby="creations-title">
+      <div class="creations__header">
+        <h2 id="creations-title" class="creations__title">Our creations</h2>
+        <button class="creations__btn" aria-label="See all virtual reality creations">See all</button>
+      </div>
+      <ul class="creations__list">
+        <li class="creations__item">
+          <a class="creations__link" href="#">
+            <img class="creations__img mobile-img" src="images/mobile/image-deep-earth.jpg"
+                 alt="Deep earth virtual reality experience">
+                 <img class="creations__img desktop-img" src="images/desktop/image-deep-earth.jpg"
+                 alt="Deep earth virtual reality experience">
+            <h3 class="creations__h3">Deep earth</h3>
+          </a>
+        </li>
+        <li class="creations__item">
+          <a class="creations__link" href="#">
+            <img class="creations__img mobile-img" src="images/mobile/image-night-arcade.jpg"
+                 alt="Night arcade virtual reality experience">
+            <img class="creations__img desktop-img" src="images/desktop/image-night-arcade.jpg"
+                 alt="Night arcade virtual reality experience">
+            <h3 class="creations__h3">Night arcade</h3>
+          </a>
+        </li>
+        <li class="creations__item">
+          <a class="creations__link" href="#">
+            <img class="creations__img mobile-img" src="images/mobile/image-soccer-team.jpg"
+                 alt="Soccer team VR experience">
+            <img class="creations__img desktop-img" src="images/desktop/image-soccer-team.jpg"
+                 alt="Soccer team VR experience">
+            <h3 class="creations__h3">Soccer team VR</h3>
+          </a>
+        </li>
+        <li class="creations__item">
+          <a class="creations__link" href="#">
+            <img class="creations__img mobile-img" src="images/mobile/image-grid.jpg"
+                 alt="The grid VR experience">
+            <img class="creations__img desktop-img" src="images/desktop/image-grid.jpg"
+                 alt="The grid VR experience">
+            <h3 class="creations__h3">The grid</h3>
+          </a>
+        </li>
+        <li class="creations__item">
+          <a class="creations__link" href="#">
+            <img class="creations__img mobile-img" src="images/mobile/image-from-above.jpg"
+                 alt="From up above VR experience">
+            <img class="creations__img desktop-img" src="images/desktop/image-from-above.jpg"
+                 alt="From up above VR experience">
+            <h3 class="creations__h3">From up above VR</h3>
+          </a>
+        </li>
+        <li class="creations__item">
+          <a class="creations__link" href="#">
+            <img class="creations__img mobile-img" src="images/mobile/image-pocket-borealis.jpg"
+                 alt="Pocket borealis VR experience">
+            <img class="creations__img desktop-img" src="images/desktop/image-pocket-borealis.jpg"
+                 alt="Pocket borealis VR experience">
+            <h3 class="creations__h3">Pocket borealis</h3>
+          </a>
+        </li>
+        <li class="creations__item">
+          <a class="creations__link" href="#">
+            <img class="creations__img mobile-img" src="images/mobile/image-curiosity.jpg"
+                 alt="The curiosity VR experience">
+            <img class="creations__img desktop-img" src="images/desktop/image-curiosity.jpg"
+                 alt="The curiosity VR experience">
+            <h3 class="creations__h3">The curiosity</h3>
+          </a>
+        </li>
+        <li class="creations__item">
+          <a class="creations__link" href="#">
+            <img class="creations__img mobile-img" src="images/mobile/image-fisheye.jpg"
+                 alt="Make it fisheye VR experience">
+            <img class="creations__img desktop-img" src="images/desktop/image-fisheye.jpg"
+                 alt="Make it fisheye VR experience">
+            <h3 class="creations__h3">Make it fisheye</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer" aria-labelledby="footer-heading">
+    <div class="footer__container">
+      <!-- Logo -->
+      <div class="footer__logo">
+        <h1 id="footer-heading" class="footer__logo-heading">
+          <a href="/" class="footer__logo-link">
+            <img class="footer__logo-image" src="images/logo.svg" alt="Loopstudios logo" width="192" height="32">
+          </a>
+        </h1>
+      </div>
+
+      <!-- Footer navigation -->
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">About</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Careers</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Events</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Products</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Support</a></li>
+        </ul>
+      </nav>
+
+      <!-- Social media links -->
+      <ul class="footer__socials" aria-label="Social media">
+        <li class="footer__socials-item">
+          <a href="https://facebook.com" class="footer__socials-link" aria-label="Visit us on Facebook">
+            <img class="footer__socials-img" src="images/icon-facebook.svg" alt="Facebook icon">
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="https://twitter.com" class="footer__socials-link" aria-label="Visit us on Twitter">
+            <img class="footer__socials-img" src="images/icon-twitter.svg" alt="Twitter icon">
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="https://pinterest.com" class="footer__socials-link" aria-label="Visit us on Pinterest">
+            <img class="footer__socials-img" src="images/icon-pinterest.svg" alt="Pinterest icon">
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="https://instagram.com" class="footer__socials-link" aria-label="Visit us on Instagram">
+            <img class="footer__socials-img" src="images/icon-instagram.svg" alt="Instagram icon">
+          </a>
+        </li>
+      </ul>
+
+      <!-- Copyright -->
+      <p class="footer__copyright">© 2021 Loopstudios. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

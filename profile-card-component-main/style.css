@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(185, 75%, 39%);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-position: -150px 0%, 150px 100%;
+    overflow: hidden;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, .5);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, .5);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, .5);
+}
+
+.card-bg img {
+    border-radius: 20px 20px 0 0;
+}
+
+.card-text {
+    width: 100%;
+}
+
+.card-text img {
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    top: 90px;
+    right: 120px;
+}
+
+.card-text .infos .name {
+    margin-top: 70px;
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+}
+
+.card-text .infos .name span {
+    font-weight: 400;
+    color: hsl(227, 10%, 46%);
+}
+
+.card-text .infos .city {
+    margin-top: 7px;
+    font-size: 13px;
+    color: hsl(227, 10%, 46%);
+}
+
+.card-text .infos {
+    padding-bottom: 25px;
+    border-bottom: 1px solid hsla(0, 0%, 59%, 0.637);
+}
+
+.stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 25px 0;
+}
+
+.stats-number {
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+
+.stats-title {
+    color: hsl(0, 0%, 59%);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        background-size: 50%, 50%;
+        background-position: -5% -300px, 105% 350px;
+    }
+
+}

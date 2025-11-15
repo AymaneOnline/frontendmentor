@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="This is a solution of the 'contact-form-main' challenge from Frontend Mentor by AymaneOnline">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main>
+    <svg id="asterisk" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><symbol id="required" viewbox="0 0 128 128"><g><path d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"></path></g></symbol></defs></svg>
+    <form id="contact" novalidate>
+      <h1 id="form-title">Contact Us</h1>
+
+      <div class="name">
+        <div class="input-control">
+          <label for="firstname">
+            First Name
+            <svg class="icon" focusable="false"><use xlink:href="#required"></use></svg>
+            
+          </label>
+          <input type="text" id="firstname" name="firstname" autocomplete="name" aria-describedby="required-firstname" required>
+          <span id="required-firstname" class="error-required visually-hidden" aria-live="polite">This field is required</span>
+        </div>
+
+        <div class="input-control">
+          <label for="lastname">
+            Last Name
+            <svg class="icon" focusable="false"><use xlink:href="#required"></use></svg>
+          </label>
+          <input type="text" id="lastname" name="lastname" autocomplete="name" aria-describedby="required-lastname" required>
+          <span id="required-lastname" class="error-required visually-hidden" aria-live="polite">This field is required</span>
+        </div>
+      </div>
+
+      <div class="email input-control">
+        <label for="email">
+          Email Address
+          <svg class="icon" focusable="false"><use xlink:href="#required"></use></svg>
+        </label>
+        <input type="email" id="email" name="email" autocomplete="email" aria-describedby="required-email valid-email" required>
+        <span id="required-email" class="error-required visually-hidden" aria-live="polite">This field is required</span>
+        <span id="valid-email" class="error-email visually-hidden" aria-live="polite">Please enter a valid email address</span>
+      </div>
+
+      <div class="query">
+        <fieldset aria-labelledby="legend">
+          <legend id="legend">
+            Query Type
+            <svg class="icon" focusable="false"><use xlink:href="#required"></use></svg>
+          </legend>
+
+          <div class="input-control radio">
+            <label for="general">
+              General Enquiry
+              <input type="radio" name="query" id="general" aria-describedby="required-query" required>
+              <span class="radio-dot"></span>
+            </label>
+          </div>
+
+          <div class="input-control radio" tabindex="0">
+            <label for="support">
+              Support Request
+              <input type="radio" name="query" id="support" aria-describedby="required-query">
+              <span class="radio-dot"></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <span id="required-query" class="error-query visually-hidden" aria-live="polite">Please select a query type</span>
+      </div>
+
+      <div class="message input-control">
+        <label for="message">
+          Message
+          <svg class="icon" focusable="false"><use xlink:href="#required"></use></svg>
+        </label>
+        <textarea name="message" id="message" aria-describedby="required-message" required></textarea>
+        <span id="required-message" class="error-required visually-hidden" aria-live="polite">This field is required</span>
+      </div>
+
+      <div class="consent-div input-control">
+        <label for="consent-input">
+          <input type="checkbox" id="consent-input" aria-describedby="required-consent" aria-required="true" required>
+          <span class="checkmark" tabindex="0"></span>
+          I consent to being contacted by the team 
+          <svg class="icon" focusable="false"><use xlink:href="#required"></use></svg>
+        </label>
+        <span id="required-consent" class="error-required visually-hidden" aria-live="polite">
+          To submit this form, please consent to being contacted
+        </span>
+      </div>
+
+      <button type="submit" aria-label="Submit contact form">Submit</button>
+
+      <div class="success hidden-success" role="alert" tabindex="-1">
+        <div class="success-title">
+          <img src="assets/images/icon-success-check.svg" alt="" aria-hidden="true">
+          <h1 tabindex="0">Message Sent!</h1>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </form>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

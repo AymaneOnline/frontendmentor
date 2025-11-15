@@ -1,0 +1,24 @@
+@use "sass:color";
+@use "../styles/config" as *;
+
+.continue-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    padding: 1rem;
+    color: $color-pale-blue;
+    background-color: $color-dark-gray-blue;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        background-color: color.scale($color-dark-gray-blue, $lightness: 15%);
+    }
+}
+
+.continue-btn:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}

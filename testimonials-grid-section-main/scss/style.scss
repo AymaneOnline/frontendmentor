@@ -1,0 +1,213 @@
+@import "config";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    min-height: 100svh;
+    background-color: $light-grayish-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .testimonials {
+        display: grid;
+        padding: 25px;
+        gap: 25px;
+
+        .card {
+            padding: 30px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 11px 57px -31px rgba(0,0,0,0.3);
+            -moz-box-shadow: 0px 11px 57px -31px rgba(0,0,0,0.3);
+            box-shadow: 0px 11px 57px -31px rgba(0,0,0,0.3);
+
+
+            .profile {
+                display: flex;
+
+                img {
+                    border-radius: 100%;
+                }
+
+                .info {
+                    margin-inline-start: 20px; 
+
+                    & > * {
+                        margin-top: 0px;
+                    }
+
+                    h1 {
+                        font-size: 13px;
+                    }
+                    
+                    p {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            h1, p {
+                margin-top: 20px;
+            }
+
+            h1 {
+                width: 100%;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .card-1, .card-2, .card-4 {
+
+            .profile {
+
+                h1 {
+                    color: $light-gray;
+                }
+
+                p {
+                    color: lighten(hsla(0, 0%, 81%, .7), 100);
+                }
+            }
+
+            h1 {
+                color: $light-gray;
+            }
+
+            p {
+                color: lighten($light-gray, 20);
+            }
+        }
+
+        .card-3, .card-5 {
+            background-color: $white;
+
+            .profile {
+
+                h1 {
+                    color: $very-dark-grayish-blue;
+                }
+
+                p {
+                    color: darken($light-gray, 50);
+                }
+            }
+
+            h1 {
+                color: $very-dark-grayish-blue;
+            }
+
+            p {
+                color: darken($light-gray, 50);
+            }
+        }
+
+        .card-1 {
+            background-color: $moderate-violet;
+            background-image: url("../images/bg-pattern-quotation.svg");
+            background-repeat: no-repeat;
+            background-position: calc(100% - 30px) 0;
+
+            .profile {
+
+                img {
+                    border: 2px solid darken($light-gray, 15);
+                }
+            }
+        }
+
+        .card-2 {
+            background-color: $very-dark-grayish-blue;
+        }
+
+        .card-4 {
+            background-color: $very-dark-blackish-blue;
+
+            .profile {
+
+                img {
+                    border: 2px solid darken($moderate-violet, 15);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .testimonials {
+        margin: 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .card-1 {
+        grid-column: 1/ span 2;
+        grid-row: 1/ 2;
+        justify-self: center;
+    }
+
+    .card-4 {
+        grid-column: 1/ span 2;
+        grid-row: 3/ 4;
+        justify-self: center;
+    }
+
+    .card-5 {
+        grid-column: 1/ span 2;
+        grid-row: 4/ 5;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .testimonials {
+        max-width: 1920px;
+        max-height: 1080px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .card-1 {
+        grid-column: 1/ span 2;
+        grid-row: 1/2;
+        justify-self: center;
+    }
+
+    .card-2 {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        justify-self: center;
+    }
+
+    .card-3 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        justify-self: center;
+    }
+
+    .card-4 {
+        grid-column: 2 / span 2;
+        grid-row: 2 / 3;
+    }
+
+    .card-5 {
+        grid-column: 4/5;
+        grid-row: 1/ span 2;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .testimonials {
+        margin: 100px;
+    }
+}

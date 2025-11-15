@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aymaneonline.github.io/frontendmentor/mortgage-repayment-calculator-main-deploy/sitemap.xml

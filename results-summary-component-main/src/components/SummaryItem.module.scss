@@ -1,0 +1,46 @@
+@use "sass:color";
+@use "../styles/config" as *;
+
+.summary__item {
+  display: flex;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+
+  &-reaction {
+    color: $color-light-red;
+    background-color: color.scale($color-light-red, $lightness: 95%);
+  }
+
+  &-memory {
+    color: $color-orangey-yellow;
+    background-color: color.scale($color-orangey-yellow, $lightness: 95%);
+  }
+
+  &-verbal {
+    color: $color-green-teal;
+    background-color: color.scale($color-green-teal, $lightness: 95%);
+  }
+
+  &-visual {
+    color: $color-cobalt-blue;
+    background-color: color.scale($color-cobalt-blue, $lightness: 95%);
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &-rate {
+    margin-left: auto;
+    color: grey;
+    font-weight: 400;
+  }
+
+  &-score {
+    color: $color-dark-gray-blue;
+    font-weight: 700;
+  }
+}

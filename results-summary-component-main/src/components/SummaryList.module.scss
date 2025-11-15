@@ -1,0 +1,12 @@
+.summary__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .summary__list {
+        margin-bottom: 2.5rem;
+    }
+}

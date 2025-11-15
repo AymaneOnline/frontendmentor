@@ -1,0 +1,201 @@
+@font-face {
+    font-family: HankenGrotesk-Medium;
+    src: url(assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+@font-face {
+    font-family: HankenGrotesk-Bold;
+    src: url(assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+@font-face {
+    font-family: HankenGrotesk-ExtraBold;
+    src: url(assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, ::after, ::before {
+    box-sizing: unset;
+}
+
+.container {
+    height: 100vh;
+}
+
+.result-summary-component {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+}
+
+.result {
+    width: 100%;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    background-image:  linear-gradient(hsl(251, 100%, 63%) ,hsl(234, 85%, 45%));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-title {
+    margin-top: 1em;
+    font-size: 1.1em;
+    font-family: HankenGrotesk-Bold;
+    color: hsl(257, 100%, 88%);
+}
+
+.result-circle {
+    margin-top: 1em;
+    padding: .5em;
+    display: inline-block;
+    background-image:  linear-gradient(hsl(234, 85%, 45%), hsl(251, 100%, 63%));
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    -webkit-box-shadow: inset 0px 200px 300px 29px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0px 200px 300px 29px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 200px 300px 29px rgba(0,0,0,0.1);
+    border-style: none;
+}
+
+.result-circle h1 {
+    font-size: 3.5em;
+    margin-top: .3em;
+    color: white;
+    font-family: HankenGrotesk-ExtraBold;
+}
+
+.result-circle p {
+    font-size: 1em;
+    color: hsla(257, 100%, 88%, 50%) ;
+    font-family: HankenGrotesk-Bold;
+}
+
+.result-comment-h {
+    margin-top: 1em;
+    font-size: 1.7em;
+    color: white;
+    font-family: HankenGrotesk-Bold;
+}
+
+.result-comment-p {
+    margin: 1em 0 2em 0;
+    font-size: 1.1em;
+    font-family: HankenGrotesk-Bold;
+    color: hsl(257, 100%, 88%);
+    max-inline-size: 29ch;
+    text-align: center;
+}
+
+.summary {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.summary-title {
+    margin: 1.5em 0 0.5em 2em;
+    color: hsl(222, 16%, 16%);
+    font-family: HankenGrotesk-ExtraBold;
+    font-size: 1em;
+}
+
+.individual-scores {
+    margin: 0em 2em;
+}
+
+.summary-div-bg {
+    background-color: hsl(173, 53%, 97%);
+    margin: 1em 0;
+    padding: .5em 1em;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    font-family: HankenGrotesk-ExtraBold;
+}
+
+.summary-div-bg i {
+    margin-right: .5em;
+}
+
+.reaction {
+    color: hsl(0, 44%, 60%)
+}
+
+.memory {
+    color: hsl(40, 91%, 62%);
+}
+
+.verbal {
+    color: hsl(166, 40%, 60%);
+}
+
+.visual {
+    color: hsl(236, 79%, 36%);
+}
+
+.score {
+    color: hsl(222, 16%, 16%);
+    margin-right: .5em;
+}
+
+.outof100 {
+    color: hsl(285, 5%, 70%);
+}
+
+
+.continue {
+    color: white;
+    font-family: HankenGrotesk-ExtraBold;
+    background-color: hsl(224, 30%, 27%);
+    border-style: none;
+    padding: 1em;
+    margin: 1em 3em;
+    border-radius: 2em;
+}
+
+.continue:hover,
+.continue:focus {
+    background-image: linear-gradient(hsl(251, 65%, 58%), hsl(243, 82%, 55%));
+}
+
+@media only screen and (min-width: 576px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .result-summary-component {
+        width: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1em;
+        -webkit-box-shadow: 28px 22px 38px -33px rgba(0,0,0,0.75);
+        -moz-box-shadow: 28px 22px 38px -33px rgba(0,0,0,0.75);
+        box-shadow: 28px 22px 38px -33px rgba(0,0,0,0.75);
+    }
+
+    .result {
+        border-radius: 2em;
+        width: 400px;
+    }
+
+    .result-comment-p {
+        max-inline-size: 25ch;
+    }
+
+    .summary {
+        width: 400px;
+    }
+}

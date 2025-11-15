@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="This is a solution of 'ecommerce-product-page-main' challenge from Frontend Mentor by AymaneOnline">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body>
+  <div id="overlay"></div>
+  <div id="lightbox" class="hidden">
+    <div class="images">
+      <div class="closing-btn">
+        <button id="close-lightbox"><ion-icon name="close-outline"></ion-icon></button>
+      </div>
+      <div class="carousel" data-carousel>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <button>
+              <img src="images/image-product-1.jpg" alt="Fall Limited Edition Sneakers First Image" width="1000" height="1000">
+            </button>
+          </li>
+          <li class="slide">
+            <button>
+              <img src="images/image-product-2.jpg" alt="Fall Limited Edition Sneakers Second Image" width="1000" height="1000">
+            </button>
+          </li>
+          <li class="slide">
+            <button>
+              <img src="images/image-product-3.jpg" alt="Fall Limited Edition Sneakers Third Image" width="1000" height="1000">
+            </button>
+          </li>
+          <li class="slide">
+            <button>
+              <img src="images/image-product-4.jpg" alt="Fall Limited Edition Sneakers Fourth Image" width="1000" height="1000">
+            </button>
+          </li>
+        </ul>
+
+        <div class="navigator">
+          <button class="previous" data-carousel-button="previous">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="next" data-carousel-button="next">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+
+      <ul class="images-thumbnail" data-thumbnails>
+        <li><button data-active="true" data-thumbnail-button="0"><img src="images/image-product-1-thumbnail.jpg" alt="Fall Limited Edition First Sneakers" width="176" height="176"></button></li>
+        <li><button data-thumbnail-button="1"><img src="images/image-product-2-thumbnail.jpg" alt="Fall Limited Edition Second Sneakers" width="176" height="176"></button></li>
+        <li><button data-thumbnail-button="2"><img src="images/image-product-3-thumbnail.jpg" alt="Fall Limited Edition Third Sneakers" width="176" height="176"></button></li>
+        <li><button data-thumbnail-button="3"><img src="images/image-product-4-thumbnail.jpg" alt="Fall Limited Edition Fourth Sneakers" width="176" height="176"></button></li>
+      </ul>
+    </div>
+  </div>
+  <header>
+    <div class="container-logo">
+      <button id="open-menu" aria-label="Open menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <div class="space"></div>
+      <h1>
+        <a href="#"><img src="images/logo.svg" alt="Sneakers" id="logo" width="138" height="20"></a>
+      </h1>
+    </div>
+
+    <nav>
+      <div id="mobile-nav">
+        <button id="close-menu" aria-label="Close menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>  
+      </div>
+
+      <ul class="desktop-nav">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="user">
+      <button id="cart" aria-label="Cart button">
+        <ion-icon name="cart-outline"></ion-icon>
+        <span class="cart-quantity hidden"></span>
+      </button>
+      <div id="cart-box" class="cart-box hidden">
+        <p>Cart</p>
+        <div class="cart-content">
+          <p id="empty"> 
+            Your cart is empty
+          </p>
+          <div id="filled" class="hidden">
+            <div class="cart-product">
+              <img src="images/image-product-1-thumbnail.jpg" alt="Fall Limited Edition First Sneakers" width="176" height="176">
+              <div class="product-info">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>$125 x <span class="cart-quantity"></span> <span id="product-total"></span></p>
+              </div>
+              <button id="delete-product">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </div>
+
+            <button>Checkout</button>
+          </div>
+        </div>
+      </div>
+      <div class="space"></div>
+      <button>
+        <img src="images/image-avatar.png" alt="Profile" id="profile" width="100" height="100">
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="images">
+        <div class="carousel" data-carousel>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <button>
+                <img src="images/image-product-1.jpg" alt="Fall Limited Edition Sneakers First Image" width="1000" height="1000">
+              </button>
+            </li>
+            <li class="slide">
+              <button>
+                <img src="images/image-product-2.jpg" alt="Fall Limited Edition Sneakers Second Image" width="1000" height="1000">
+              </button>
+            </li>
+            <li class="slide">
+              <button>
+                <img src="images/image-product-3.jpg" alt="Fall Limited Edition Sneakers Third Image" width="1000" height="1000">
+              </button>
+            </li>
+            <li class="slide">
+              <button>
+                <img src="images/image-product-4.jpg" alt="Fall Limited Edition Sneakers Fourth Image" width="1000" height="1000">
+              </button>
+            </li>
+          </ul>
+
+          <div class="navigator">
+            <button id="previous" data-carousel-button="previous" aria-label="Previous image">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button id="next" data-carousel-button="next" aria-label="Next image">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+  
+        <ul class="images-thumbnail" data-thumbnails>
+          <li><button data-active="true" data-thumbnail-button="0"><img src="images/image-product-1-thumbnail.jpg" alt="Fall Limited Edition First Sneakers" width="176" height="176"></button></li>
+          <li><button data-thumbnail-button="1"><img src="images/image-product-2-thumbnail.jpg" alt="Fall Limited Edition Second Sneakers" width="176" height="176"></button></li>
+          <li><button data-thumbnail-button="2"><img src="images/image-product-3-thumbnail.jpg" alt="Fall Limited Edition Third Sneakers" width="176" height="176"></button></li>
+          <li><button data-thumbnail-button="3"><img src="images/image-product-4-thumbnail.jpg" alt="Fall Limited Edition Fourth Sneakers" width="176" height="176"></button></li>
+        </ul>
+      </div>
+      
+      
+
+      <div class="text">
+        <p class="brand">Sneaker Company</p>
+        <h2>Fall Limited Edition Sneakers</h2>
+
+        <p class="description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        
+        <div class="price">
+          <span class="price-new">$125.00</span>
+          <span class="promo">50%</span>
+          <span class="price-old">$250.00</span>
+        </div>
+
+        <div class="product-add">
+          <div class="input-control">
+            <label for="quantity" class="visually-hidden">Quantity:</label>
+            <input id="quantity" type="number" min="1" value="0">
+            <button id="minus" class="minus" aria-label="Reduce quantity"><ion-icon name="remove-outline"></ion-icon></button>
+            <button id="plus" class="plus" aria-label="Increase quantity"><ion-icon name="add-outline"></ion-icon></button>
+          </div>
+
+          <button id="addBtn" aria-label="Add to cart - Fall Limited Edition Sneakers">
+            <ion-icon name="cart-outline"></ion-icon>
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

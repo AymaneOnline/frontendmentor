@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --font-barlow: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-barlow-condensed: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-bellefair: "Bellefair", ui-serif, Georgia, serif;
+}
+
+@layer utilities {
+  .font-barlow {
+    font-family: var(--font-barlow);
+  }
+  .font-barlow-condensed {
+    font-family: var(--font-barlow-condensed);
+  }
+  .font-bellefair {
+    font-family: var(--font-bellefair);
+  }
+}

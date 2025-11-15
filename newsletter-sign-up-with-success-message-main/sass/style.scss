@@ -1,0 +1,281 @@
+@import "config";
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+.hidden {
+    display: none!important;
+}
+
+html {
+    font-family: 'Roboto';
+}
+
+body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.sign-up {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .illustration {
+        #img-mobile {
+            width: 100%;
+        }
+    
+        #img-desktop {
+            display: none;
+        }
+    }
+
+    .text {
+        flex-grow: 1;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            color: $dark-slate-grey;
+            margin-bottom: 20px;
+            font-style: bold;
+        }
+    
+        p {
+            color: $dark-slate-grey;
+            margin-bottom: 20px;
+        }
+    
+        ul {
+            margin-bottom: 20px;
+    
+            li {
+                display: flex;
+                margin-bottom: 15px;
+                color: $dark-slate-grey;
+    
+                i {
+                    margin-right: 15px;
+                }
+            }
+        }
+    
+        form {
+            margin-top: auto;
+            margin-bottom: 20px;
+    
+            .email-input {
+                width: 100%;
+                position: relative;
+    
+                label {
+                    font-size: 12px;
+                    color: $dark-slate-grey;
+                    font-weight: bold;
+                }
+                
+                input {
+                    width: 100%;
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+                    padding: 20px;
+                    outline: none;
+                    border-radius: 10px;
+                    border: 1px solid $grey;
+                    font-size: 16px;
+                    color: $charcoal-grey;
+                    
+                }
+    
+                input:focus {
+                    border-color: $charcoal-grey;
+                }
+
+                .error {
+                    border-color: $tomato;
+                    background-color: lighten($tomato, 27);
+                }
+
+                .error-message {
+                    color: $tomato;
+                    font-size: 12px;
+                    font-weight: bold;
+                    position: absolute;
+                    bottom: 85px;
+                    right: 0px;
+                }
+            }
+        }
+    }
+}
+
+.success {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    img {
+        margin-top: 120px;
+    }
+
+    h1 {
+        margin-top: 35px;
+        color: $dark-slate-grey;
+    }
+
+    p {
+        margin-top: 20px;
+        color: $dark-slate-grey;
+
+        #success-email {
+            font-weight: bold;
+        }
+    }
+
+    button {
+        margin-top: auto;
+        margin-bottom: 20px;
+    }
+
+}
+
+.btn {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $white;
+    background-color: $dark-slate-grey;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, $tomato, orangered);
+    box-shadow: 0px 7px 20px $tomato;
+}
+
+.btn:focus {
+    background: linear-gradient(90deg, $tomato, orangered);
+    box-shadow: 0px 7px 20px $tomato;
+}
+
+@media screen and (min-width: 576px) {
+
+    body {
+        background-color: $charcoal-grey;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sign-up {
+        background: white;
+        flex-grow: unset;
+        flex-direction: row-reverse;
+        padding: 20px;
+        border-radius: 20px;
+
+        .illustration {
+            display: none;
+
+            #img-mobile {
+                display: none;
+            }
+
+            #img-desktop {
+                display: block;
+            }
+        }
+
+        .text {
+            max-width: 420px;
+            justify-content: center;
+
+            h1 {
+                font-size: 56px;
+            }
+
+            form {
+                margin-top: unset;
+            }
+        }
+    }
+
+    .success {
+        flex: unset;
+        width: 460px;
+        border-radius: 20px;
+        background-color: $white;
+        padding: 50px;
+
+        img {
+            margin-top: unset;
+        }
+
+        h1 {
+            font-size: 56px;
+        }
+
+        button {
+            margin-top: 40px;
+            margin-bottom: unset;
+        }
+    }
+}
+
+@media screen and (min-width: 846px) {
+    
+    .sign-up {
+
+        .illustration {
+            display: block;
+        }
+
+        .text {
+            margin-inline-end: 25px;
+
+            h1 {
+                margin-bottom: 30px;
+            }
+
+            p {
+                margin-bottom: 30px;
+            }
+
+            ul {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

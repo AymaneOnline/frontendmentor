@@ -1,0 +1,269 @@
+@import "config";
+
+/* RESET & DEFAULT */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img, ion-icon {
+    display: block;
+}
+
+html {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-grayish-blue;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    overflow: auto;
+}
+
+/* Article Card */
+
+/* Mobile */
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 6px 6px 5px hsla(0, 0%, 0%, 0.02),
+              25px 25px 20px hsla(0, 0%, 0%, 0.03),
+              100px 100px 80px hsla(0, 0%, 0%, 0.05);
+
+    .img-box {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+
+        .article-banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    .article-content {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 30px 20px 30px;
+        border-radius: 0 0 10px 10px;
+
+        .article-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: $very-dark-grayish-blue;
+            margin-block-end: 20px;
+        }
+
+        .article-text {
+            font-size: 14px;
+            color: $desaturated-dark-blue;
+            margin-block-end: 20px;
+        }
+
+        .article-content-footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0 0 0;
+            position: relative;
+
+            .author {
+                display: flex;
+
+                .author-avatar {
+                    border-radius: 50%;
+                    margin-inline-end: 14px;
+                }
+
+                .author-name {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $very-dark-grayish-blue;
+                }
+
+                .publish-date {
+                    font-size: 13px;
+                    color: $desaturated-dark-blue;
+                }
+            }
+
+            .share {
+
+                .share-button {
+                    position: relative;
+                    padding: 8px;
+                    border-radius: 50%;
+                    background-color: $light-grayish-blue;
+                    color: $desaturated-dark-blue;
+                    font-size: 16px;
+                    z-index: 2;
+                    transition: all 0.2s ease;
+
+                    &:hover, &.active {
+                        background-color: $grayish-blue;
+                        color: $light-grayish-blue;
+                    }
+                }
+
+                .share-option {
+                    position: absolute;
+                    visibility: hidden;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: calc(100% + 60px);
+                    left: -30px;
+                    bottom: -20px;
+                    padding: 30px;
+                    background-color: $very-dark-grayish-blue;
+                    transition: all 0.2s ease;
+                    transform: translate(0, 100%) scale(0);
+                    border-radius: 0 0 10px 10px;
+                    box-shadow: 0 5px 20px -5px #0003; //shadow
+                    z-index: 1;
+
+                    &.active {
+                        visibility: visible;
+                        transform: translate(0px, 0px) scale(1);
+                    }
+
+                    span {
+                        font-size: 14px;
+                        font-weight: 200;
+                        text-transform: uppercase;
+                        letter-spacing: 5px;
+                        color: $grayish-blue;
+                        margin-inline-end: 20px;
+                    }
+
+                    ion-icon {
+                        font-size: 24px;
+                        margin-inline-end: 10px;
+                    }
+                }
+            }
+        }
+
+        .article-title:hover,
+        .author-name:hover,
+        .share-option ion-icon:hover {
+            filter: invert(1);
+        }
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        overflow: visible;
+    }
+
+    .article-card {
+        flex-direction: row;
+        max-width: 730px;
+        overflow: visible;
+    
+        .img-box {
+            width: 290px;
+            height: 275px!important;
+            
+            .article-banner {
+                object-position: left;
+                height: 100%;
+                border-radius: 10px 0 0 10px;
+            }
+        }
+
+        .article-content {
+            max-width: 440px;
+            align-items: flex-start;
+            border-radius: 0 10px 10px 0;
+
+            .article-title {
+                font-size: 20px;
+                max-inline-size: 28ch;
+            }
+
+            .article-text {
+                font-size: 13px;
+                max-inline-size: 100ch; // -_-
+            }
+
+            .article-content-footer {
+                position: relative;
+                padding: 0 0 10px 0;
+
+                .share {
+        
+                    .share-option {
+                        width: unset!important;
+                        left: calc(65% + 12px);
+                        justify-content: center!important;
+                        bottom: calc(100% + 20px);
+                        padding: 15px 30px;
+                        z-index: 1;
+                        border-radius: 10px;
+                        gap: 10px;
+
+                        span {
+                            font-size: 12px;
+                            margin-inline-end: unset;
+                        }
+
+                        ion-icon {
+                            font-size: 20px;
+                            margin-inline-end: unset;
+                        }
+
+                        &::after {
+                            content: '';
+                            background-color: $very-dark-grayish-blue;
+                            width: 20px;
+                            height: 20px;
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            transform: translate(-50%, -60%) rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

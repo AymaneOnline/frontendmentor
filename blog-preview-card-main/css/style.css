@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Figtree";
+  src: url(../assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url(../assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(47, 88%, 63%);
+  font-family: "Figtree";
+  min-height: 100svh;
+  display: flex;
+}
+body .container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.blog-card {
+  max-width: 384px;
+  max-height: 522px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 24px;
+  border: 1px hsl(0, 0%, 7%) solid;
+  box-shadow: 7px 7px 0px 0px hsl(0, 0%, 7%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.blog-card > * {
+  margin-bottom: 24px;
+}
+.blog-card > *:last-child {
+  margin-bottom: unset;
+}
+.blog-card:hover {
+  box-shadow: 10px 10px 0px 0px hsl(0, 0%, 7%);
+  transform: translate(-3px, -3px);
+}
+.blog-card #blog-image {
+  border-radius: 10px;
+  width: 100%;
+}
+.blog-card .blog-text {
+  letter-spacing: 0px;
+  line-height: 1.5;
+}
+.blog-card .blog-text > * {
+  margin-bottom: 12px;
+}
+.blog-card .blog-text > *:last-child {
+  margin-bottom: unset;
+}
+.blog-card .blog-text .category a {
+  text-decoration: unset;
+  color: hsl(0, 0%, 7%);
+  font-size: 0.875em;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: hsl(47, 88%, 63%);
+}
+.blog-card .blog-text .publish_date {
+  font-size: 0.875em;
+  letter-spacing: 0px;
+  color: hsl(0, 0%, 7%);
+}
+.blog-card .blog-text .title {
+  font-size: 1.5em;
+  color: hsl(0, 0%, 7%);
+}
+.blog-card .blog-text .title:hover {
+  cursor: pointer;
+  color: hsl(47, 88%, 63%);
+}
+.blog-card .blog-text .description {
+  font-size: 1em;
+  color: #595959;
+}
+.blog-card .author {
+  display: flex;
+  align-items: center;
+}
+.blog-card .author:hover {
+  cursor: pointer;
+}
+.blog-card .author .authorname {
+  font-size: 14px;
+  font-weight: 800;
+  margin-left: 12px;
+}

@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100svh;
+  background-color: hsl(0, 0%, 98%);
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 15px;
+}
+h1 span {
+  font-weight: 200;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+}
+
+.four-card {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: auto;
+}
+.four-card .column .cyan {
+  margin-bottom: 30px;
+}
+.four-card .column-2 {
+  display: flex;
+  flex-direction: column;
+}
+.four-card .column-2 .card {
+  margin-bottom: 30px;
+}
+.four-card .card {
+  padding: 30px;
+  background-color: white;
+  text-align: start;
+  border-radius: 10px;
+  max-inline-size: 35ch;
+  min-inline-size: 35ch;
+}
+.four-card .card h3 {
+  font-size: 1.3rem;
+  color: hsl(234, 12%, 34%);
+}
+.four-card .card p {
+  font-size: 13px;
+}
+.four-card .card .image {
+  margin-top: 30px;
+  display: flex;
+  justify-content: end;
+}
+.four-card .cyan {
+  box-shadow: 0px -5px 0px -1px hsl(180, 62%, 55%), 0px 11px 57px -31px rgba(0, 0, 0, 0.3);
+}
+.four-card .red {
+  box-shadow: 0px -5px 0px -1px hsl(0, 78%, 62%), 0px 11px 57px -31px rgba(0, 0, 0, 0.3);
+}
+.four-card .orange {
+  box-shadow: 0px -5px 0px -1px hsl(34, 97%, 64%), 0px 11px 57px -31px rgba(0, 0, 0, 0.3);
+}
+.four-card .blue {
+  box-shadow: 0px -5px 0px -1px hsl(212, 86%, 64%), 0px 11px 57px -31px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 1100px) {
+  .four-card {
+    gap: 30px;
+    flex-direction: row;
+  }
+  .four-card .column-2 {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

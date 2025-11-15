@@ -1,0 +1,27 @@
+@use "sass:color";
+@use "../styles/config" as *;
+
+.summary__container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary__title {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+@media screen and (min-width: 768px) {
+    .summary__container {
+        padding: 2rem;
+        min-width: 330px;
+        max-width: 330px;
+    }
+
+    .summary__title {
+        font-size: 1.5rem;
+    }
+}

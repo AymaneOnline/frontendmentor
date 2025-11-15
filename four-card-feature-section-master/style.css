@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+h1, h3 {
+    color: hsl(234, 12%, 34%);
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+}
+
+body {
+    height: 100svh;
+    background-color: hsl(0, 0%, 98%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.row-1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.row-1 .normal {
+    font-weight: 200;
+}
+
+.row-1 .bold {
+    font-weight: 600;
+}
+
+.row-1 p {
+    margin-top: 15px;
+}
+
+.row-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 20px 0;
+}
+
+.row-2 p {
+    max-inline-size: 33ch;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-spec {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.card-spec img {
+    margin-top: 30px;
+    align-self: flex-end;
+}
+
+.card-spec p {
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+.card-cyan {
+    -webkit-box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(180, 62%, 55%);
+    -moz-box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(180, 62%, 55%);
+    box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(180, 62%, 55%);
+}
+
+.card-red {
+    -webkit-box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(0, 78%, 62%);
+    -moz-box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(0, 78%, 62%);
+    box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(0, 78%, 62%);
+}
+
+.card-orange {
+    -webkit-box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(34, 97%, 64%);
+    -moz-box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(34, 97%, 64%);
+    box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(34, 97%, 64%);
+}
+
+.card-blue {
+    -webkit-box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(212, 86%, 64%);
+    -moz-box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(212, 86%, 64%);
+    box-shadow: 0px 15px 32px -16px rgba(66, 68, 90, .7), 0px -3px 0px -0px hsl(212, 86%, 64%);
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    .row-1 h1 {
+        font-size: 2.4rem;
+    }
+
+    .row-1 p {
+        max-inline-size: 54ch;
+    }
+
+    .row-2 {
+        flex-direction: row;
+    }
+
+    .row-2 p {
+        max-inline-size: 33ch;
+    }
+
+    .col-1,
+    .col-2 {
+        margin-right: 30px;
+    }
+}

@@ -1,0 +1,118 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  background: url(../assets/images/background-pattern-mobile.svg) no-repeat;
+  background-color: hsl(275, 100%, 97%);
+  min-height: 100svh;
+  display: flex;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.faq {
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.faq .title {
+  display: flex;
+  align-items: center;
+}
+.faq .title img {
+  margin-inline-end: 20px;
+  width: 1.5em;
+  height: 1.5em;
+}
+.faq .faq-item {
+  border-block-end: 2px solid hsl(275, 100%, 97%);
+  padding: 20px 0;
+}
+.faq .faq-item:last-child {
+  border: none;
+  padding-block-end: 0px;
+}
+.faq .faq-item .answer {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq .faq-item .answer p {
+  color: hsl(292, 16%, 49%);
+  font-size: 0.98rem;
+}
+.faq .faq-item input:checked + label + .answer {
+  max-height: 200px;
+  margin-top: 15px;
+}
+.faq .faq-item label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+.faq .faq-item label:hover {
+  cursor: pointer;
+  color: #AD28EB;
+}
+.faq .faq-item label img {
+  margin-inline-start: 20px;
+}
+.faq .faq-item label .minus {
+  display: none;
+}
+.faq .faq-item input:checked + label .plus {
+  display: none;
+}
+.faq .faq-item input:checked + label .minus {
+  display: block;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url("../assets/images/background-pattern-desktop.svg");
+    background-size: contain;
+  }
+  .faq {
+    max-width: 575px;
+    padding: 30px;
+  }
+  .faq h1 {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=style.css.map */

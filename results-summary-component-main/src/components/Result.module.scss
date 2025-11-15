@@ -1,0 +1,49 @@
+@use "sass:color";
+@use "../styles/config" as *;
+
+.result__container {
+    background-image: linear-gradient($gradient-light-slate-blue, $gradient-light-royal-blue);
+    padding: 2.5rem 3rem;
+    text-align: center;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.result__title {
+    font-size: 18px;
+    color: $color-light-lavender;
+    margin-bottom: 1.5rem;
+}
+
+.result__paragraph {
+    color: $color-light-lavender;
+    font-size: 1rem;
+}
+
+.result__comment {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .result__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 330px;
+        max-width: 330px;
+        border-radius: 2rem;
+    }
+
+    .result__title {
+        font-size: 22px;
+    }
+
+    .result__comment {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+}

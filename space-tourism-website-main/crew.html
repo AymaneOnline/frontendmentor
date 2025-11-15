@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Space tourism website challenge from Frontend Mentor by AymaneOnline">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="src/style.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body class="bg-[url(/public/assets/crew/background-crew-mobile.jpg)]
+             md:bg-[url(/assets/crew/background-crew-tablet.jpg)]
+             lg:bg-[url(/public/assets/crew/background-crew-desktop.jpg)] bg-cover bg-no-repeat
+             min-h-[100svh] flex flex-col
+             relative overflow-x-hidden">
+  <header class="p-6 flex justify-between items-center md:p-0 lg:just">
+    <a href="#">
+    <img class="w-[2.5rem] h-[2.5rem] md:w-[3rem] md:h-[3rem] md:mx-10 md:my-6 lg:mx-16 lg:my-16" src="/assets/shared/logo.svg" alt="Space Logo">
+    </a>
+    <div class="hidden lg:block flex-1 z-15 h-[2px] bg-[rgba(255,255,255,0.5)] my-auto"></div>
+    <button id="open-menu-btn" class="cursor-pointer z-5 md:hidden">
+      <img class="" src="/assets/shared/icon-hamburger.svg" alt="Open Menu">
+    </button>
+    <nav tabindex="-1" inert id="menu-nav" class="absolute backdrop-blur-[30px] min-w-[254px] min-h-[100svh] top-0 right-0 translate-x-[254px] z-10 flex flex-col transition-transform duration-1000 ease-in-out
+    md:static md:flex-row md:items-center md:translate-x-0 md:min-h-[0] md:bg-[rgba(255,255,255,0.05)]
+    lg:my-10 lg:items-center lg:relative lg:before:content-[''] lg:before:bg-[rgba(255,255,255,0.5)] lg:before:h-[2px] lg:before:w-[32px]">
+      <button id="close-menu-btn" class="mx-6 my-8 cursor-pointer self-end md:hidden md:self-auto">
+        <img src="/assets/shared/icon-close.svg" alt="Close Menu">
+      </button>
+      <ul id="menu-list" class="pl-8 mt-12 self-end font-barlow-condensed text-white tracking-[2px] uppercase flex flex-col gap-8 w-full
+      md:flex-row md:mt-0 md:pr-[38.5px] md:pl-[117px] md:justify-end">
+        <li class=" border-e-4 border-transparent hover:border-gray-400 md:pt-[40px] md:pb-[36px] md:border-e-0 md:hover:border-b-4 transition-colors duration-700 ease-in-out"><a href="index.html">00 Home</a></li>
+        <li class="   border-e-4 border-transparent hover:border-gray-400 md:pt-[40px] md:pb-[36px] md:border-e-0 md:hover:border-b-4 transition-colors duration-700 ease-in-out "><a href="destination.html">01 Destination</a></li>
+        <li id="crew-btn" class="border-e-4 border-white md:pt-[40px] md:pb-[36px] md:border-e-0 md:border-b-4 "><a href="#">02 Crew</a></li>
+        <li class="border-e-4 border-transparent hover:border-gray-400 md:pt-[40px] md:pb-[36px] md:border-e-0 md:hover:border-b-4 transition-colors duration-700 ease-in-out"><a href="technology.html">03 Technology</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main id="content" class="p-6 text-center flex flex-col h-full flex-1 gap-[32px] md:p-[40px] md:pb-0 lg:flex-row lg:pb-[48px] lg:pt-0 lg:px-[100px] 2xl:px-[165px] lg:items-end lg:justify-center lg:gap-[32px]">
+  <section aria-labelledby="crew-section-heading" class="md:flex md:flex-col md:self-center md:w-full lg:self-stretch lg:justify-center lg:gap-8 lg:max-w-[1110px]">
+    
+    <!-- Section Heading -->
+    <h2 id="crew-section-heading" class="inline-block mb-6 font-barlow-condensed text-[16px] uppercase text-white tracking-[2px] md:self-start md:text-[20px] lg:text-[28px] lg:mb-auto">
+      <span class="mr-6 font-bold text-[rgba(255,255,255,0.25)]">02</span>
+      Meet your crew
+    </h2>
+
+    <!-- Crew Info -->
+    <article class="flex flex-col min-h-[320px] justify-center items-center md:mx-auto lg:mx-0 lg:min-w-[50%] lg:text-start lg:self-stretch lg:justify-center lg:px-[20px] lg:items-start lg:h-full" aria-labelledby="crew-name" aria-describedby="crew-role crew-bio">
+      <p id="crew-role" class="font-bellefair text-[18px] text-[rgba(255,255,255,0.5)] uppercase mb-2 mt-auto md:text-[24px]">
+        Commander
+      </p>
+      <h1 id="crew-name" class="mb-6 font-bellefair text-white text-[24px] uppercase leading-[1] md:text-[40px]">
+        Douglas Hurley
+      </h1>
+      <p id="crew-bio" class="mb-6 font-barlow text-[#D0D6F9] text-[15px] tracking-[0px] md:text-[16px] md:max-w-[512px] lg:text-[18px] lg:max-w-[539px]">
+        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+      </p>
+
+      <!-- Navigation: Crew Selector -->
+      <nav aria-label="Select crew member" class="mt-auto lg:mb-[48px]">
+        <ul id="crew-list" class="flex justify-center gap-4 lg:justify-start lg:gap-[40px]">
+          <!-- Active Crew Button -->
+          <li>
+            <button
+              type="button"
+              aria-label="Show Douglas Hurley"
+              aria-current="true"
+              class="w-[10px] h-[10px] rounded-full bg-white text-transparent focus-visible:outline-white focus-visible:outline-2 focus-visible:outline-offset-2 lg:w-[15px] lg:h-[15px]"
+            ></button>
+          </li>
+          <!-- Inactive Crew Buttons -->
+          <li>
+            <button
+              type="button"
+              aria-label="Show Mark Shuttleworth"
+              class="w-[10px] h-[10px] rounded-full bg-[rgba(255,255,255,0.5)] text-transparent hover:bg-white transition-colors duration-300 ease-in focus-visible:outline-white focus-visible:outline-2 focus-visible:outline-offset-2 lg:w-[15px] lg:h-[15px]"
+            ></button>
+          </li>
+          <li>
+            <button
+              type="button"
+              aria-label="Show Victor Glover"
+              class="w-[10px] h-[10px] rounded-full bg-[rgba(255,255,255,0.5)] text-transparent hover:bg-white transition-colors duration-300 ease-in focus-visible:outline-white focus-visible:outline-2 focus-visible:outline-offset-2 lg:w-[15px] lg:h-[15px]"
+            ></button>
+          </li>
+          <li>
+            <button
+              type="button"
+              aria-label="Show Anousheh Ansari"
+              class="w-[10px] h-[10px] rounded-full bg-[rgba(255,255,255,0.5)] text-transparent hover:bg-white transition-colors duration-300 ease-in focus-visible:outline-white focus-visible:outline-2 focus-visible:outline-offset-2 lg:w-[15px] lg:h-[15px]"
+            ></button>
+          </li>
+        </ul>
+      </nav>
+    </article>
+  </section>
+
+  <!-- Crew Image -->
+  <div class="mt-auto flex justify-center items-center lg:self-center lg:py-0 lg:min-w-[50%] lg:my-0">
+    <img
+      id="crew-img"
+      class="w-auto h-[340px] lg:h-auto"
+      src="/assets/crew/image-douglas-hurley.png"
+      alt="Portrait of Commander Douglas Hurley"
+    />
+  </div>
+</main>
+
+
+  <script type="module" src="/src/crew.js"></script>
+  </body>
+</html>

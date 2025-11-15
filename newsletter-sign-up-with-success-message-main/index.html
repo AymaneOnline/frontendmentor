@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="This is a solution of 'newsletter-sign-up-with-success-message-main' from Frontend Mentor by AymaneOnline">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+<body>
+  <main>
+    <div class="sign-up">
+      <div class="illustration">
+        <img id="img-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="Mobile Illustration" width="375" height="284">
+        <img id="img-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="Desktop Illustration" width="400" height="593">
+      </div>
+  
+      <div class="text">
+        <h1>Stay updated!</h1>
+  
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    
+        <ul>
+          <li>
+            <i><img src="assets/images/icon-list.svg" alt="list-icon" width="21" height="21"></i>
+            Product discovery and building what matters
+          </li>
+          <li>
+            <i><img src="assets/images/icon-list.svg" alt="list-icon" width="21" height="21"></i>
+            Measuring to ensure updates are a success
+          </li>
+          <li>
+            <i><img src="assets/images/icon-list.svg" alt="list-icon" width="21" height="21"></i>
+            And much more!
+          </li>
+        </ul>
+    
+        <form id="form" novalidate>
+          <div class="email-input">
+            <label for="email">Email address</label>
+            <input id="email" class="" name="email" type="email" placeholder="email@company.com" autocomplete="on">
+            <div class="error-message hidden">Valid email required</div>
+          </div>
+    
+          <button class="btn" type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="success-message" class="success hidden">
+      <i><img src="assets/images/icon-success.svg" alt=""></i>
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span id="success-email"></span>. 
+      Please open it and click the button inside to confirm your subscription.</p>
+      
+      <button id="dismiss-btn" class="btn">Dismiss message</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

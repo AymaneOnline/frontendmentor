@@ -1,0 +1,22 @@
+%h {
+    font-family: "Young Serif";
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+h1 {
+    @extend %h;
+    color: $dark-charcoal;
+}
+
+h2 {
+    @extend %h;
+    color: $nutmeg;
+   
+}
+
+#time {
+    font-family: "Outfit";
+    color: $dark-raspberry;
+    font-weight: 600;
+}

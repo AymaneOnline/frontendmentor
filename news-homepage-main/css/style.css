@@ -1,0 +1,341 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/static/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: unset;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.hidden-nav {
+  right: -100% !important;
+}
+
+p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.6;
+}
+
+html {
+  font-family: "Inter";
+  font-size: 0.938rem;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  gap: 30px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  display: none;
+  opacity: 0;
+  height: 100%;
+}
+
+.show-overlay {
+  display: block !important;
+  opacity: 0.5;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #logo {
+  width: 50px;
+  height: auto;
+}
+header nav #mobile-nav .mobile-menu {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: hsl(36, 100%, 99%);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: end;
+  padding: 30px 15px;
+  transition: right 0.3s ease;
+}
+header nav #mobile-nav .mobile-menu ul {
+  height: 100%;
+  align-self: self-start;
+  margin-block-start: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: fixed;
+}
+header nav #mobile-nav .mobile-menu ul a {
+  color: hsl(240, 100%, 5%);
+  font-size: 1.2rem;
+}
+header nav #mobile-nav .mobile-menu #close-menu-btn {
+  position: fixed;
+}
+header nav #desktop-nav {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  gap: 60px;
+}
+
+main section article #featured-img-mobile {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-block-end: 20px;
+}
+main section article #featured-img-desktop {
+  display: none;
+}
+main section article .text h2 {
+  font-size: 2.8rem;
+  line-height: 0.95;
+  color: hsl(240, 100%, 5%);
+  margin-block-end: 20px;
+}
+main section article .text .content {
+  display: flex;
+  flex-direction: column;
+}
+main section article .text .content p {
+  margin-block-end: 20px;
+}
+main section article .text .content a {
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(240, 100%, 5%);
+  padding: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+main section article .text .content a:hover {
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+}
+
+aside {
+  background-color: hsl(240, 100%, 5%);
+}
+aside section {
+  padding: 20px;
+}
+aside section h2 {
+  font-size: 2rem;
+  color: hsl(35, 77%, 62%);
+}
+aside section ul li {
+  padding: 30px 0px;
+  border-block-end: 1px solid rgba(255, 255, 255, 0.685);
+}
+aside section ul li:last-child {
+  padding: 30px 0 0 0;
+  border-block-end: unset;
+}
+aside section ul li h2 {
+  margin-block-end: 10px;
+}
+aside section ul li a {
+  font-size: 1.3rem;
+  color: hsl(36, 100%, 99%);
+}
+aside section ul li a:hover {
+  color: hsl(35, 77%, 62%);
+}
+aside section ul li p {
+  color: rgba(255, 255, 255, 0.582);
+}
+
+.latest-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-block-end: 50px;
+}
+.latest-articles article {
+  display: flex;
+  gap: 20px;
+}
+.latest-articles article img {
+  width: 100px;
+  height: auto;
+}
+.latest-articles article .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.latest-articles article .text span {
+  color: hsl(5, 85%, 63%);
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+.latest-articles article .text h2 {
+  font-size: 1.2rem;
+  color: hsl(240, 100%, 5%);
+}
+.latest-articles article .text h2:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    padding: 40px;
+  }
+  #mobile-nav {
+    display: none;
+  }
+  #desktop-nav {
+    display: block !important;
+  }
+  #desktop-nav ul {
+    display: flex;
+    gap: 40px;
+  }
+  #desktop-nav ul a {
+    color: hsl(236, 13%, 42%);
+  }
+  #desktop-nav ul a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-container main {
+    grid-column: 1/span 2;
+  }
+  .grid-container main #featured-img-mobile {
+    display: none;
+  }
+  .grid-container main #featured-img-desktop {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    margin-block-end: 30px;
+  }
+  .grid-container .latest-articles {
+    margin-block-end: unset;
+  }
+}
+@media screen and (min-width: 920px) {
+  .grid-container {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid-container main {
+    max-width: 720px;
+    grid-column: 1/span 2;
+    display: flex;
+  }
+  .grid-container main section {
+    flex: 1;
+    display: flex;
+  }
+  .grid-container main section article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-container main section article img {
+    flex: 1;
+  }
+  .grid-container main section article .text {
+    flex: 1;
+    display: flex;
+  }
+  .grid-container main section article .text h2 {
+    flex: 1;
+    font-size: 3.5rem;
+    margin-inline-end: 30px;
+  }
+  .grid-container main section article .text .content {
+    flex: 1;
+    display: flex;
+  }
+  .grid-container aside {
+    max-width: 345px;
+  }
+  .grid-container .latest-articles {
+    margin-block-start: 30px;
+    max-width: 1095px;
+    flex-direction: row;
+    grid-column: 1/span 3;
+  }
+  .grid-container .latest-articles article {
+    flex: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

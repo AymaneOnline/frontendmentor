@@ -1,0 +1,73 @@
+@import 'config';
+@import 'fonts';
+@import 'utilities';
+@import 'buttons';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $off-black;
+    min-height: 100svh;
+    font-family: $font-name;
+    display: flex;
+    font-size: 14px;
+}
+
+.social-profile-card {
+    background-color: $dark-grey;
+    padding: 24px;
+    border-radius: 10px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        
+    img {
+        border-radius: 100%;
+        margin-bottom: 24px;
+    }
+
+    .name {
+        color: $white;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .address {
+        color: $primary-color;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .title {
+        color: $white;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        width: 100%;
+
+        li {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (min-width: 376px) {
+        padding: 32px;
+    }
+}
+
+    

@@ -1,0 +1,343 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-family: "League Spartan", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem 1.5rem;
+  z-index: 10;
+}
+.header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header .nav__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav__toggle {
+  position: absolute;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.header .nav__list {
+  position: absolute;
+  background-color: hsl(0, 100%, 100%);
+  width: calc(100% + 3rem);
+  height: calc(14px + 6rem);
+  left: -1.5rem;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+}
+.header .nav__link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.header .nav__link::after {
+  content: "";
+  position: absolute;
+  height: 0.125rem;
+  width: 1.5rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-250%);
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.header .nav__link:hover::after {
+  transform: translateX(-50%);
+}
+
+.main {
+  overflow: hidden;
+}
+.main__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}
+.main .hero {
+  overflow: hidden;
+  z-index: 2;
+}
+.main .hero__mobile {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.main .hero__desktop {
+  display: none;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.main .hero__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+.main .hero__image {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+.main .features {
+  position: relative;
+}
+.main .features__controls {
+  position: absolute;
+  display: flex;
+  top: -3.75rem;
+  right: 0;
+  background-color: hsl(0, 0%, 0%);
+  z-index: 3;
+}
+.main .features__controls button {
+  background-color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem;
+  color: hsl(0, 0%, 0%);
+  transition: all 0.3s ease-in-out;
+}
+.main .features__controls button:hover, .main .features__controls button:focus {
+  background-color: hsl(0, 0%, 27%);
+}
+.main .features__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+  overflow: hidden;
+}
+.main .features__item {
+  padding: 3rem 1.5rem;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+.main .features__title {
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.main .features__text {
+  color: hsl(0, 0%, 63%);
+  margin-bottom: 2rem;
+}
+.main .features__link {
+  display: inline-block;
+  flex: 0 0 auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 14px;
+  transition: all 0.3s ease-in-out;
+}
+.main .features__link svg {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+.main .features__link:hover {
+  color: hsl(0, 0%, 63%);
+}
+.main .features__link:hover svg {
+  fill: hsl(0, 0%, 63%);
+}
+.main .about-text {
+  padding: 3rem 1.5rem;
+}
+.main .about-text__title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.main .about-text__paragraph {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.5;
+}
+.main .about-images {
+  display: flex;
+}
+.main .about-images__image {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 390px) {
+  .main .hero__mobile {
+    display: none;
+  }
+  .main .hero__desktop {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  .header {
+    padding: 3rem;
+  }
+  .header .nav {
+    justify-content: start;
+  }
+  .header .nav__logo {
+    margin-right: 3rem;
+  }
+  .header .nav__toggle {
+    display: none;
+  }
+  .header .nav__list {
+    display: flex !important;
+    position: relative;
+    color: white;
+    background-color: transparent;
+    justify-content: start;
+    padding: 0;
+    height: unset;
+    left: unset;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    min-height: 100svh;
+  }
+  .main__overlay {
+    display: none !important;
+  }
+  .main .hero {
+    grid-area: 1/1/5/7;
+  }
+  .main .hero__desktop {
+    width: 100%;
+    height: 100%;
+  }
+  .main .hero__track {
+    flex: 1;
+    width: 100%;
+  }
+  .main .hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .main .features {
+    grid-area: 1/7/5/11;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .features__controls {
+    position: unset;
+    top: unset;
+    right: unset;
+    order: 2;
+    align-self: start;
+    width: 25%;
+    height: 15%;
+  }
+  .main .features__button {
+    padding: 1rem 0;
+  }
+  .main .features__button--prev {
+    width: 100%;
+    height: 100%;
+  }
+  .main .features__button--next {
+    width: 100%;
+    height: 100%;
+  }
+  .main .features__track {
+    flex: 1;
+  }
+  .main .features__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+  .main .features__link {
+    align-self: flex-start;
+    display: inline-block;
+  }
+  .main .about-images--dark {
+    grid-area: 5/1/7/4;
+  }
+  .main .about-text {
+    grid-area: 5/4/7/8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.875rem;
+  }
+  .main .about-images--light {
+    grid-area: 5/8/7/11;
+  }
+}
+@media screen and (min-width: 1400px) and (orientation: landscape) {
+  .features__item {
+    padding: 4.5rem !important;
+  }
+  .features__title {
+    font-size: 3rem !important;
+  }
+}/*# sourceMappingURL=style.css.map */

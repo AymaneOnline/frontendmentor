@@ -1,0 +1,143 @@
+@import 'config';
+@import 'utility';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+}
+
+body {
+    background-color: $cream;
+    min-height: 100svh;
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .card-content {
+        background-color: #fff;
+        border-end-start-radius: 10px;
+        border-end-end-radius: 10px;
+        padding: 25px;
+
+        & > * {
+            margin-top: 15px;
+        }
+
+        .category {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: $dark-grayish-blue;
+            margin-top: 0;
+        }
+
+        .name {
+            font-family: "Fraunces", serif;
+            font-size: 2.2rem;
+            color: $very-dark-blue;
+        }
+
+        .description {
+            color: $dark-grayish-blue;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            .new-price {
+                font-family: "Fraunces", serif;
+                font-size: 2rem;
+                color: $dark-cyan;
+                margin-inline-end: 20px;
+            }
+
+            .old-price {
+                text-decoration: line-through;
+                color: $dark-grayish-blue;
+            }
+        }
+
+        button {
+            width: 100%;
+            border: unset;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: $dark-cyan;
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: lighten($dark-cyan, 10%);
+                transform: scale(.99);
+            }
+
+            .icon-cart {
+                margin-inline-end: 10px;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-start-start-radius: 10px;
+        border-start-end-radius: 10px;
+    }
+
+    .image-1 {
+        display: block;
+    }
+
+    .image-2 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    
+    .card {
+        flex-direction: row-reverse;
+        width: 560px;
+        height: 419.81px;
+
+        .card-content {
+            height: 100%;
+            max-inline-size: 30ch;
+            border-start-end-radius: 10px;
+            border-end-start-radius: 0px;
+        }
+
+        img {
+            border-start-end-radius: 0px;
+            border-end-start-radius: 10px;
+        }
+
+        .image-1 {
+            display: none;
+        }
+
+        .image-2 {
+            display: block;
+        }
+    }
+}

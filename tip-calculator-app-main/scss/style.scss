@@ -1,0 +1,253 @@
+@import "config";
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+// Removing Number Input Arrows:
+/* For Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+html {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+
+body {
+    min-height: 100svh;
+    display: flex;
+    background-color: $light-grayish-cyan;
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tip-calculator {
+            flex: 1;
+            padding-bottom: 20px;
+            background-color: white;
+            border-start-start-radius: 25px;
+            border-start-end-radius: 25px;      
+
+            form {
+                padding: 30px;
+
+                label {
+                    color: $dark-grayish-cyan;
+                }
+
+                input {
+                    width: 100%;
+                    margin-top: 10px;
+                    padding: 10px;
+                    padding-right: 20px;
+                    border-radius: 7px;
+                    background-color: $very-light-grayish-cyan;
+                    border: none;
+                    text-align: right;
+                    font-family: "Space Mono", monospace;
+                    font-weight: 700;
+                    font-size: 24px;
+                    
+                    &:focus {
+                        outline: 2px solid $grayish-cyan;
+                    }
+                }
+
+                .input {
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        bottom: 20px;
+                        left: 20px;
+                    }
+
+                    .error {
+                        border: 2px solid tomato;
+                    }
+
+                    .error-message {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        color: tomato;
+                    }
+                }
+
+                .tip-input {
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+
+                    .tip-buttons {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px;
+
+                        button {
+                            font-family: "Space Mono", monospace;
+                            font-weight: 700;
+                            font-size: 24px;
+                            padding: 7px;
+                            border-radius: 5px;
+                            background-color: $very-dark-cyan;
+                            color: white;
+
+                            &:hover {
+                                background-color: $dark-grayish-cyan;
+                            }
+
+                            &.active {
+                                background-color: $dark-grayish-cyan;
+                            }
+                        }
+
+                        #custom {
+                            margin-top: unset;
+                            background-color: $very-light-grayish-cyan;
+                            color: darken($grayish-cyan, 20);
+                        }
+                    }
+                }
+            }
+
+            .result {
+                margin: 20px;
+                padding: 20px;
+                border-radius: 20px;
+                background-color: $very-dark-cyan;
+
+                div {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: white;
+
+                    span {
+                        color: lighten($grayish-cyan, 20);
+                    }
+
+                    .value {
+                        font-size: 34px;
+                        color: lighten($grayish-cyan, 20);
+                    }
+                }
+
+                button {
+                    margin-top: 30px;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 7px;
+                    font-family: "Space Mono", monospace;
+                    font-weight: 700;
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    background-color: $grayish-cyan;
+                    color: $very-dark-cyan;
+
+                    &:hover {
+                        background-color: $light-grayish-cyan;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    main {
+        align-items: center;   
+
+        .tip-calculator {
+            max-width: 576px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        padding: 0px!important;
+        padding-bottom: 20px!important;
+    }
+    .tip-calculator {
+        // margin: 40px 0 !important;
+        display: flex;
+        flex: unset!important;
+        max-width: 960px!important;
+        margin: 0 20px;
+        padding-bottom: unset!important;
+        border-radius: 20px;
+        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
+
+
+        form {
+            flex: 1;
+            padding: 40px!important;
+
+            .tip-input {
+            
+                .tip-buttons {
+                    grid-template-columns: 1fr 1fr 1fr!important;
+                }
+            }
+        }
+
+        .result {
+            flex: 1;
+            position: relative;
+
+            button {
+                position: absolute;
+                width: calc(100% - 80px)!important;
+                bottom: 40px;
+                right: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .logo {
+        padding: 80px!important;
+    }
+
+    .tip-calculator {
+        margin-bottom: 200px!important;
+    }
+}

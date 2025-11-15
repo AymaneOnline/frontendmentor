@@ -1,0 +1,274 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+}
+
+.dashboard {
+  display: grid;
+  margin: 75px 20px;
+  grid-template-columns: auto;
+  gap: 20px 0px;
+}
+.dashboard .card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+.dashboard .user .user-info {
+  display: flex;
+  padding: 25px;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 15px;
+}
+.dashboard .user .user-info img {
+  width: 70px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-inline-end: 15px;
+}
+.dashboard .user .user-info span {
+  font-size: 15px;
+  color: white;
+}
+.dashboard .user .user-info .firstname, .dashboard .user .user-info .lastname {
+  align-self: center;
+  font-size: 22px;
+  font-weight: lighter;
+  color: white;
+}
+.dashboard .user .time-opt {
+  background-color: hsl(235, 46%, 20%);
+  border-end-start-radius: 15px;
+  border-end-end-radius: 15px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard .user .time-opt button {
+  font-size: 17px;
+  font-weight: 300;
+  color: #b9bce4;
+  background-color: hsl(235, 46%, 20%);
+}
+.dashboard .user .time-opt button.hover-active {
+  color: white;
+}
+.dashboard .user .time-opt button:hover, .dashboard .user .time-opt button:focus {
+  color: white;
+  cursor: pointer;
+}
+.dashboard .work-card {
+  background-color: hsl(348, 100%, 68%);
+}
+.dashboard .work-card .work-img {
+  width: 79px;
+  height: 79px;
+  transform: translateY(10px);
+}
+.dashboard .play-card {
+  background-color: hsl(195, 74%, 62%);
+}
+.dashboard .play-card .play-img {
+  width: 76px;
+  height: 77px;
+  transform: translateY(15px);
+}
+.dashboard .study-card {
+  background-color: hsl(348, 100%, 68%);
+}
+.dashboard .study-card .study-img {
+  width: 79px;
+  height: 79px;
+  transform: translateY(10px);
+}
+.dashboard .exercise-card {
+  background-color: hsl(145, 58%, 55%);
+}
+.dashboard .exercise-card .exercise-img {
+  width: 81px;
+  height: 55px;
+  transform: translateY(7px);
+}
+.dashboard .social-card {
+  background-color: hsl(264, 64%, 52%);
+}
+.dashboard .social-card .social-img {
+  width: 75px;
+  height: 100px;
+  transform: translateY(17px);
+}
+.dashboard .self-care-card {
+  background-color: hsl(43, 84%, 65%);
+}
+.dashboard .self-care-card .self-care-img {
+  width: 79px;
+  height: 79px;
+  transform: translateY(10px);
+}
+.dashboard .card .card-img {
+  border-radius: 15px;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+}
+.dashboard .card .card-img img {
+  margin-inline-end: 15px;
+}
+.dashboard .card .card-text {
+  border-radius: 15px;
+  padding: 25px;
+  background-color: hsl(235, 46%, 20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.dashboard .card .card-text:hover, .dashboard .card .card-text:focus {
+  background-color: #292f70;
+}
+.dashboard .card .card-text .card-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.dashboard .card .card-text .card-infos .title {
+  color: white;
+}
+.dashboard .card .card-text .card-infos button {
+  font-size: 28px;
+  padding: 10px 0;
+  background-color: unset;
+  color: hsl(236, 100%, 87%);
+}
+.dashboard .card .card-text .card-infos button .dot-container {
+  display: flex;
+  gap: 3px; /* Space between the dots */
+}
+.dashboard .card .card-text .card-infos button .dot-container .dot {
+  width: 5px;
+  height: 5px;
+  background-color: hsl(236, 100%, 87%); /* Color of the dots */
+  border-radius: 50%; /* Makes the dot circular */
+  display: inline-block;
+}
+.dashboard .card .card-text .card-infos button:hover .dot {
+  background-color: white;
+}
+.dashboard .card .card-text .card-hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard .card .card-text .card-hours .current {
+  font-size: 28px;
+  font-weight: lighter;
+  color: white;
+}
+.dashboard .card .card-text .card-hours p {
+  font-size: 15px;
+  color: hsl(236, 100%, 87%);
+}
+
+@media screen and (min-width: 575px) {
+  .dashboard {
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+  .dashboard .user {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 850px) {
+  .dashboard {
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+  }
+  .dashboard .user {
+    grid-column: 1/4;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dashboard {
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+  }
+  .dashboard .user {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .dashboard .user .user-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 80px;
+  }
+  .dashboard .user .user-info img {
+    margin-bottom: 40px;
+  }
+  .dashboard .user .user-info span {
+    font-size: 13px;
+  }
+  .dashboard .user .user-info .firstname, .dashboard .user .user-info .lastname {
+    display: block;
+    font-size: 30px;
+  }
+  .dashboard .user .time-opt {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .dashboard .card {
+    width: 220px;
+  }
+  .dashboard .card .card-text {
+    height: calc(100% - 40px);
+  }
+  .dashboard .card .card-text .card-infos {
+    margin-bottom: 20px;
+  }
+  .dashboard .card .card-text .card-hours {
+    flex-direction: column;
+    align-items: start;
+  }
+  .dashboard .card .card-text .card-hours .current {
+    margin-bottom: 7px;
+    font-size: 50px;
+    font-weight: lighter;
+  }
+}/*# sourceMappingURL=style.css.map */

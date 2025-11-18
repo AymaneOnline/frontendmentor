@@ -1,6 +1,6 @@
 import {
-  // Use BrowserRouter for better compatibility with screenshot/crawler tools
-  createBrowserRouter,
+  // Revert to HashRouter: works reliably for multi-app GitHub Pages without needing root-level 404 handling.
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -14,8 +14,8 @@ import { countriesLoader } from "./pages/Home"
 export default function App() {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
-  // Use createBrowserRouter with a 404.html fallback in deployment
-  const router = createBrowserRouter(
+  // Hash router ensures routes resolve under subfolder without server-side rewrites.
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} >
         <Route

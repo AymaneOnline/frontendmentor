@@ -1,5 +1,6 @@
 import {
-  createBrowserRouter,
+  // 1. Change: Import createHashRouter instead of createBrowserRouter
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -13,7 +14,8 @@ import { countriesLoader } from "./pages/Home"
 export default function App() {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
-  const router = createBrowserRouter(
+  // 2. Change: Use createHashRouter
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} >
         <Route
@@ -30,6 +32,7 @@ export default function App() {
   return (
     <RouterProvider
       router={router}
+      // You can keep the future prop if you wish, but it's not strictly related to the HashRouter switch.
       future={{ v7_startTransition: true }}
     />
   )

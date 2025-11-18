@@ -1,6 +1,6 @@
 import {
-  // 1. Change: Import createHashRouter instead of createBrowserRouter
-  createHashRouter,
+  // Use BrowserRouter for better compatibility with screenshot/crawler tools
+  createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -14,8 +14,8 @@ import { countriesLoader } from "./pages/Home"
 export default function App() {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
-  // 2. Change: Use createHashRouter
-  const router = createHashRouter(
+  // Use createBrowserRouter with a 404.html fallback in deployment
+  const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} >
         <Route

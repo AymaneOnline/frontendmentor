@@ -1,5 +1,6 @@
 {
   "name": "tip-calculator-react",
+  "homepage": "https://aymaneonline.github.io/frontendmentor/tip-calculator-app-main",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -8,7 +9,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist --dest tip-calculator-app-main --add"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -19,6 +22,7 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^4.3.3",
+    "gh-pages": "^6.3.0",
     "jsdom": "^27.2.0",
     "vite": "^5.4.10",
     "vitest": "^4.0.10"

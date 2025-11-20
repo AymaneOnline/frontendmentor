@@ -1,5 +1,18 @@
 # Frontend Mentor - Tip calculator app
 
+## React + Vite (migration notes)
+
+This project has been converted from vanilla JS to React using Vite. Existing styles (in `css/style.css`) and assets (in `images/`) are preserved.
+
+- Dev server: `npm run dev`
+- Production build: `npm run build`
+- Preview build: `npm run preview`
+
+Notes:
+- The `images/` folder is served as static assets via Vite's `publicDir` config, so paths like `/logo.svg` work as before.
+- Styles are still included via `<link href="/css/style.css" />` in `index.html`.
+
+
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋

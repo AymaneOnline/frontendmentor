@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -37,8 +39,12 @@ html {
 
 body {
   min-height: 100svh;
-  display: flex;
   background-color: hsl(185, 41%, 84%);
+}
+body #root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 body main {
   flex: 1;
@@ -53,6 +59,8 @@ body main .logo {
   justify-content: center;
 }
 body main .tip-calculator {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   padding-bottom: 20px;
   background-color: white;
@@ -125,7 +133,7 @@ body main .tip-calculator form .tip-input .tip-buttons button.active {
 body main .tip-calculator form .tip-input .tip-buttons #custom {
   margin-top: unset;
   background-color: hsl(189, 41%, 97%);
-  color: #4f6769;
+  color: hsl(184, 14%, 36%);
 }
 body main .tip-calculator .result {
   margin: 20px;
@@ -141,11 +149,11 @@ body main .tip-calculator .result div {
   color: white;
 }
 body main .tip-calculator .result div span {
-  color: #b9c9ca;
+  color: hsl(184, 14%, 76%);
 }
 body main .tip-calculator .result div .value {
   font-size: 34px;
-  color: #b9c9ca;
+  color: hsl(184, 14%, 76%);
 }
 body main .tip-calculator .result button {
   margin-top: 30px;
@@ -178,7 +186,9 @@ body main .tip-calculator .result button:hover {
   }
   .tip-calculator {
     display: flex;
+    flex-direction: row !important;
     flex: unset !important;
+    width: 100% !important;
     max-width: 960px !important;
     margin: 0 20px;
     padding-bottom: unset !important;
@@ -186,6 +196,7 @@ body main .tip-calculator .result button:hover {
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
   }
   .tip-calculator form {
+    width: 50% !important;
     flex: 1;
     padding: 40px !important;
   }
@@ -193,6 +204,7 @@ body main .tip-calculator .result button:hover {
     grid-template-columns: 1fr 1fr 1fr !important;
   }
   .tip-calculator .result {
+    width: 50% !important;
     flex: 1;
     position: relative;
   }

@@ -1,8 +1,12 @@
+import iconArcade from '/assets/images/icon-arcade.svg'
+import iconAdvanced from '/assets/images/icon-advanced.svg'
+import iconPro from '/assets/images/icon-pro.svg'
+
 const StepTwo = ({ formData, updateFormData, isYearly, setIsYearly, plans }) => {
   const planOptions = [
-    { id: 'arcade', name: 'Arcade', icon: '/assets/images/icon-arcade.svg' },
-    { id: 'advanced', name: 'Advanced', icon: '/assets/images/icon-advanced.svg' },
-    { id: 'pro', name: 'Pro', icon: '/assets/images/icon-pro.svg' }
+    { id: 'arcade', name: 'Arcade', icon: iconArcade },
+    { id: 'advanced', name: 'Advanced', icon: iconAdvanced },
+    { id: 'pro', name: 'Pro', icon: iconPro }
   ]
 
   return (

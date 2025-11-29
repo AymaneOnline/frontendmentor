@@ -1,3 +1,5 @@
+import iconCheckmark from '/assets/images/icon-checkmark.svg'
+
 const StepThree = ({ formData, updateFormData, isYearly, addons }) => {
   const toggleAddon = (addonId) => {
     const currentAddons = formData.addons || []
@@ -31,7 +33,7 @@ const StepThree = ({ formData, updateFormData, isYearly, addons }) => {
                   }`}
               >
                 {isSelected && (
-                  <img src="/assets/images/icon-checkmark.svg" alt="check" className="w-3" />
+                  <img src={iconCheckmark} alt="check" className="w-3" />
                 )}
               </div>
               <div className="flex-1 text-left">

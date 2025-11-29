@@ -1,3 +1,6 @@
+import bgSidebarDesktop from '/assets/images/bg-sidebar-desktop.svg'
+import bgSidebarMobile from '/assets/images/bg-sidebar-mobile.svg'
+
 const Sidebar = ({ currentStep }) => {
   const steps = [
     { number: 1, label: 'Your info' },
@@ -8,7 +11,10 @@ const Sidebar = ({ currentStep }) => {
 
   return (
     <div
-      className="pt-8 pb-24 px-8 bg-cover bg-center md:w-72 md:rounded-xl md:p-8 md:bg-[url('/assets/images/bg-sidebar-desktop.svg')] bg-[url('/assets/images/bg-sidebar-mobile.svg')]"
+      className="pt-8 pb-24 px-8 bg-cover bg-center md:w-72 md:rounded-xl md:p-8"
+      style={{
+        backgroundImage: `url(${window.innerWidth >= 768 ? bgSidebarDesktop : bgSidebarMobile})`
+      }}
     >
       <div className="flex md:flex-col gap-4 md:gap-8 justify-center md:justify-start">
         {steps.map((step) => (

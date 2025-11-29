@@ -1,6 +1,6 @@
-import iconArcade from '/assets/images/icon-arcade.svg'
-import iconAdvanced from '/assets/images/icon-advanced.svg'
-import iconPro from '/assets/images/icon-pro.svg'
+import iconArcade from '../assets/images/icon-arcade.svg'
+import iconAdvanced from '../assets/images/icon-advanced.svg'
+import iconPro from '../assets/images/icon-pro.svg'
 
 const StepTwo = ({ formData, updateFormData, isYearly, setIsYearly, plans }) => {
   const planOptions = [

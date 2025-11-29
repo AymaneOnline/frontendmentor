@@ -1,5 +1,5 @@
-import bgSidebarDesktop from '/assets/images/bg-sidebar-desktop.svg'
-import bgSidebarMobile from '/assets/images/bg-sidebar-mobile.svg'
+import bgSidebarDesktop from '../assets/images/bg-sidebar-desktop.svg'
+import bgSidebarMobile from '../assets/images/bg-sidebar-mobile.svg'
 
 const Sidebar = ({ currentStep }) => {
   const steps = [

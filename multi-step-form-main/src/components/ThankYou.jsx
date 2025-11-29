@@ -1,4 +1,4 @@
-import iconThankYou from '/assets/images/icon-thank-you.svg'
+import iconThankYou from '../assets/images/icon-thank-you.svg'
 
 const ThankYou = () => {
   return (

@@ -1,4 +1,4 @@
-import iconCheckmark from '/assets/images/icon-checkmark.svg'
+import iconCheckmark from '../assets/images/icon-checkmark.svg'
 
 const StepThree = ({ formData, updateFormData, isYearly, addons }) => {
   const toggleAddon = (addonId) => {

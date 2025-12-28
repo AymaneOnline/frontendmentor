@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && cp dist/index.html dist/404.html && gh-pages -d dist --dest rest-countries-api-with-color-theme-switcher-master --add"
+    "deploy": "gh-pages -d dist --dest multi-step-form --add"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",

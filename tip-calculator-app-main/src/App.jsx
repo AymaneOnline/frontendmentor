@@ -1,4 +1,7 @@
 import React, { useMemo, useState } from 'react'
+import logo from './assets/logo.svg'
+import iconDollar from './assets/icon-dollar.svg'
+import iconPerson from './assets/icon-person.svg'
 
 function clampNumber(n, min, max) {
   if (Number.isNaN(n)) return min
@@ -74,7 +77,7 @@ export default function App() {
   return (
     <main>
       <div className="logo">
-        <img src="/logo.svg" alt="Splitter's Logo" className="logo-img" width="87" height="54" />
+        <img src={logo} alt="Splitter's Logo" className="logo-img" width="87" height="54" />
       </div>
 
       <div className="tip-calculator">
@@ -93,7 +96,7 @@ export default function App() {
               inputMode="decimal"
             />
             <span className={`error-message bill-error${showBillZeroError ? '' : ' hidden'}`}>Can't be zero</span>
-            <img src="/icon-dollar.svg" alt="Dollar icon" className="icon-dollar" width="11" height="17" />
+            <img src={iconDollar} alt="Dollar icon" className="icon-dollar" width="11" height="17" />
           </div>
 
           <div className="tip-input">
@@ -138,7 +141,7 @@ export default function App() {
               inputMode="numeric"
             />
             <span className={`error-message person-error${showPeopleZeroError ? '' : ' hidden'}`}>Can't be zero</span>
-            <img src="/icon-person.svg" alt="Person icon" className="icon-person" width="13" height="16" />
+            <img src={iconPerson} alt="Person icon" className="icon-person" width="13" height="16" />
           </div>
         </form>
 
